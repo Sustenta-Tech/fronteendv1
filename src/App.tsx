@@ -6,6 +6,8 @@ import Navbar from './components/estaticos/navbar/Navbar'
 import Contato from './paginas/contato/Contato'
 import Home from './paginas/home/Home'
 import Sobre from './paginas/sobre/Sobre'
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsusario';
+import Login from './paginas/login/Login';
 
 function App() {
 
@@ -18,6 +20,9 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<CadastroUsuario />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>
