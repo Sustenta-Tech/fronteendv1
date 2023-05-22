@@ -25,22 +25,22 @@ function Carrossel() {
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
-                  }}
+                }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
 
                 <SwiperSlide>
-                    <img src="https://imgur.com/uBNecqE.jpg" alt="Imagem" />
+                    <img src="https://imgur.com/uBNecqE.jpg" alt="Imagem" referrerPolicy="no-referrer" />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="https://imgur.com/wWJMpWl.jpg" alt="Imagem" />
+                    <img src="https://imgur.com/wWJMpWl.jpg" alt="Imagem" referrerPolicy="no-referrer" />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="https://i.imgur.com/153khxC.png" alt="Imagem" />
+                    <img src="https://i.imgur.com/153khxC.png" alt="Imagem" referrerPolicy="no-referrer" />
                 </SwiperSlide>
 
                 <SwiperSlide>

@@ -1,0 +1,20 @@
+.navbar {
+    background-color: black !important;
+    color: white !important;
+}
+
+.cursor {
+    color: white;
+}
+.border {
+    border: 1px solid red;
+}
+
+.separar {
+    justify-content: space-between;
+}
+
+.boxNav {
+    align-items: center;
+    flex-wrap: wrap;
+}

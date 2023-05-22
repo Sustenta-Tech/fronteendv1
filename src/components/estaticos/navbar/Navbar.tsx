@@ -5,57 +5,66 @@ import './Navbar.css'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
+
 function Navbar() {
     return (
         <>
-            <AppBar position='static' style={{ backgroundColor:"green" }}>
-                <Toolbar variant='dense'>
-                    <Box className='cursor'>
-                        <Typography variant='h5'>
-                            Sustenta Tech
-                        </Typography>
-                    </Box>
+            <AppBar position='static' className='navbar' >
+                <Toolbar variant='dense' className='separar'>
 
-                    <Box display="flex" justifyContent="start">
-                        <Link to='/home'className='text-decorator-none'>
-                            <Box mx={1}  className='cursor'>
+                    <Box display="flex" justifyContent="start" className='boxNav' >
+
+                        <Box className='cursor'>
+                            <img src='src\imagens\logo+nome.png' alt="logo" />
+                        </Box>
+
+                        <Link to='/home' className='text-decorator-none'>
+                            <Box mx={1} className='cursor'>
                                 <Typography variant='h6'>
                                     Home
                                 </Typography>
                             </Box>
                         </Link>
+
                         <Link to='/sobre' className='text-decorator-none'>
-                        <Box mx={1} className='cursor'>
-                        <Typography variant='h6'>
-                                Sobre
-                        </Typography>
-                        </Box>
+                            <Box mx={1} className='cursor'>
+                                <Typography variant='h6'>
+                                    Sobre
+                                </Typography>
+                            </Box>
                         </Link>
+
                         <Link to='/produtos' className='text-decorator-none'>
-                        <Box mx={1} className='cursor'>
-                        <Typography variant='h6' >
-                           Produtos
-                        </Typography>
-                        </Box>
+                            <Box mx={1} className='cursor'>
+                                <Typography variant='h6' >
+                                    Produtos
+                                </Typography>
+                            </Box>
                         </Link>
+
                         <Link to='/contato' className='text-decorator-none'>
-                        <Box mx={1}  className='cursor'>
-                        <Typography variant='h6' >
-                            Contato
-                        </Typography>
-                        </Box>
+                            <Box mx={1} className='cursor'>
+                                <Typography variant='h6' >
+                                    Contato
+                                </Typography>
+                            </Box>
                         </Link>
+
+                    </Box>
+
+                    <Box display="flex" justifyContent="start">
                         <Link to='/login' className='text-decorator-none'>
-                        <Box mx={1}  className='cursor'>
-                        <Typography variant='h6'>
-                            Login
-                        </Typography>
-                        </Box>
+                            <Box mx={1} className='cursor'>
+                                <Typography variant='h6'>
+                                    Login
+                                </Typography>
+                            </Box>
                         </Link>
+
                         <Link to='/carrinho' className='text-decorator-none'>
-                        <Box mx={1}  className='cursor'>
-                            <ShoppingCartIcon />
-                        </Box>
+                            <Box mx={1} className='cursor'>
+                                <ShoppingCartIcon />
+                            </Box>
                         </Link>
                     </Box>
                 </Toolbar>

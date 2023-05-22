@@ -1,6 +1,7 @@
 import { Button, Grid, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import React from "react";
+import './Sobre.css'
 
 function Sobre() {
     return (
@@ -16,14 +17,14 @@ function Sobre() {
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/3CytTdi.jpg" alt="" width="724px" height="500px" />
-                </Grid>
+
+                <Grid item xs={6} className="imagem"></Grid>
+                {/* <Grid item xs={6} >
+                    <img src="https://i.imgur.com/3CytTdi.jpg" alt="" width="724px" height="500px" referrerPolicy="no-referrer"/>
+                </Grid> */}
             </Grid>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/3CytTdi.jpg" alt="" width="670px" height="500px" />
-                </Grid>
+                <Grid item xs={6} className="imagem"></Grid>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
                         <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Missão e Valores</Typography>
@@ -46,9 +47,7 @@ function Sobre() {
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/3CytTdi.jpg" alt="" width="724px" height="500px" />
-                </Grid>
+                <Grid item xs={6} className="imagem"></Grid>
             </Grid>
         </>
     )
