@@ -29,8 +29,8 @@ function Login() {
         })
     }
 
-    useEffect(()=> {
-        if(token != ''){
+    useEffect(() => {
+        if (token != '') {
             history('/home')
         }
     }, [token])
@@ -41,7 +41,7 @@ function Login() {
             await login(`/usuarios/logar`, userLogin, setToken)
 
             alert('Usuário logado com sucesso!')
-        } catch(error){
+        } catch (error) {
             alert('Dados do usuário inconsistentes, Erro ao logar!');
         }
 
@@ -51,7 +51,7 @@ function Login() {
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
-                <Box paddingX={20}>
+                <Box paddingX={20} className='border'>
                     <form onSubmit={onSubmit}>
 
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>
@@ -64,25 +64,29 @@ function Login() {
 
                         <Box marginTop={2} textAlign='center'>
                             <Button type='submit' variant='contained' color='primary'>
-                                Logar
+                                Acessar
                             </Button>
                         </Box>
                     </form>
-
-                    <Box display='flex' justifyContent='center' marginTop={2}>
-                        <Box marginRight={1}>
-                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
-                        </Box>
-
-                        <Link to="/cadastro">
-                            <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
-                        </Link>
-
-                    </Box>
                 </Box>
             </Grid>
 
-            <Grid className='imagem'></Grid>
+            <Grid className='grid' alignItems='center' xs={6}>
+                <Box className='cardVerde'>
+                    <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>
+                        Bem Vindo de Volta
+                    </Typography>
+                    <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'</Typography>
+
+                    <Box marginTop={2} textAlign='center'>
+                        <Link to="/cadastro">
+                            <Button type='submit' variant='contained' color='primary'>
+                                Cadastre-se
+                            </Button>
+                        </Link>
+                    </Box>
+                </Box>
+            </Grid>
 
         </Grid>
     )
