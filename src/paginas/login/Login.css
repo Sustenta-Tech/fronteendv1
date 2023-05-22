@@ -1,29 +1,64 @@
-.textos1 {
-    font-weight: bold !important;
+.tituloLogin {
+    font-size: 2rem !important;
+    color: var(--cor-verde-claro) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.627);
+    font-size: 34px;
+    font-weight: 500;
 }
 
-.imagem {
-    /* background-image: url(https://scontent.fcgh8-1.fna.fbcdn.net/v/t1.6435-9/51733937_2069936349971685_6209504033967702016_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=-HuwjB_qZRAAX-XyMv3&_nc_ht=scontent.fcgh8-1.fna&oh=00_AfB75ZDivULfq6PUgICcqTYhZ9zxsO6UVH0hR2atyoSBSQ&oe=648D9635);
-    background-repeat: no-repeat; */
-    width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-   
+.subtitulo {   
+    font-size: 1.5rem !important;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.627);
 }
 
-.text-decorator-none {
-    text-decoration: none;
-}
-
-.border {
-    /* border: solid 1px red; */
-}
-
-.cardVerde {
-    background-color: green;
+.texto {
+    text-align: center ;
+    color: white;
+    font-weight: 300;
 }
 
 .grid {
-   /* height: 100vh; */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.cardInfo {
+    max-width: 400px;
+    height: 300px;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardVerde {
+    max-width: 400px;
+    height: 300px;
+    padding: 10px;
+    padding-top: 60px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(45deg, var(--cor-verde-claro), var(--cor-verde));
+    box-sizing: border-box;
+    box-shadow: -10px 0 35px rgba(0,0,0,.233);
+}
+
+.button{
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+.button:hover{
+    font-size: 1,6rem;
+    text-shadow: 1px 1px 2px black;
+}
+
+#buttonEntrar {
+    background-color: var(--cor-verde-claro) !important;
 }
