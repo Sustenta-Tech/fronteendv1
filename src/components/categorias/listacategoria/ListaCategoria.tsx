@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Card, CardActions, CardContent, Typography } from '@material-ui/core';
+import { Card, CardContent, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './ListaCategoria.css';
 import { busca } from '../../../services/Service';
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
+// import { useSelector } from 'react-redux';
+// import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
+import useLocalStorage from 'react-use-localstorage';
 
 function ListaCategoria() {
     const [categorias, setCategorias] = useState<Categoria[]>([])
     let navigate = useNavigate();
-    // const [token, setToken] = useLocalStorage('token');
+    const [token, setToken] = useLocalStorage('token');
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
+    // const token = useSelector<TokenState, TokenState["tokens"]>(
+    //     (state) => state.tokens
+    // );
 
     useEffect(() => {
         if (token == '') {

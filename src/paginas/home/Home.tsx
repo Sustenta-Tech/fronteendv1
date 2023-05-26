@@ -3,8 +3,8 @@ import { Button, Grid, Typography } from '@material-ui/core'
 import { Box } from '@mui/material'
 import './Home.css'
 import Carrossel from "../../components/carrossel/Carrossel";
-import ListaProdutos from "../../components/produtos/listaprodutos/ListaProdutos";
-import ListaCategoria from "../../components/categorias/listacategoria/ListaCategoria";
+import ListaProdutos from "../../components/produtos/listaproduto/ListaProdutos";
+// import ListaCategoria from "../../components/categorias/listacategoria/ListaCategoria";
 
 function Home() {
     return (
@@ -12,7 +12,7 @@ function Home() {
             <Grid container style={{ marginTop: "8px" }}>
                 <Grid item xs={12}>
                     <Carrossel />
-                    <ListaCategoria />
+                    {/* <ListaCategoria /> */}
                     <ListaProdutos />
                 </Grid>
             </Grid>

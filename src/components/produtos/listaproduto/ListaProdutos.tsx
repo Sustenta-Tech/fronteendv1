@@ -1,35 +1,41 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
 import { Box } from '@mui/material';
 import './ListaProdutos.css';
-import { busca } from '../../../services/Service';
-import { useSelector } from 'react-redux';
-import useLocalStorage from 'react-use-localstorage';
+import { busca, buscaProduto } from '../../../services/Service';
+// import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../../models/Produto';
-import { TokenState } from '../../../store/tokens/tokensReducer';
+// import { useSelector } from 'react-redux';
+// import { TokenState } from '../../../store/tokens/tokensReducer';
+import useLocalStorage from 'react-use-localstorage';
 
 function ListaProdutos() {
 
     const [produtos, setProdutos] = useState<Produto[]>([])
     let navigate = useNavigate();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
+    // const [token, setToken] = useLocalStorage('token');
+    // const token = useSelector<TokenState, TokenState["tokens"]>(
+    //     (state) => state.tokens
+    // );
 
-    useEffect(() => {
-        if (token == '') {
-            alert("Você precisa estar logado")
-            navigate("/login")
-        }
-    }, [token])
+    // useEffect(() => {
+    //     if (token == '') {
+    //         alert("Você precisa estar logado")
+    //         navigate("/login")
+    //     }
+    // }, [token])
+
+    // async function getProdutos() {
+    //     await busca("/produtos", setProdutos, {
+    //         headers: {
+    //             'Authorization': token
+    //         }
+    //     })
+    // }
 
     async function getProdutos() {
-        await busca("/produtos", setProdutos, {
-            headers: {
-                'Authorization': token
-            }
-        })
+        await buscaProduto("/produtos", setProdutos);
     }
 
     useEffect(() => {
