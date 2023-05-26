@@ -5,131 +5,14 @@
     padding: 40px;
 }
 
-.endereco{
-    font-family: 'lato' Roboto;
-    color: gray;
-    font-size: 1rem;
 
-}
 
 .formulario{
-    width: 50%;
+    width: 80%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto:wght@100;500&display=swap');
 
-:root{
-    --background-body: #605e65;
-    --background-nav:#2B2B2B;
-    --background-footer:#2B2B2B;
-    --sombra: gray;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-p{
-    font-family: 'lato', Roboto;
-    margin-bottom: 1.5rem;
-}
-
-h1,
-h2,
-h3,
-a{
-    font-family: 'lato', cursive;
-    letter-spacing: 3px;
-    font-weight: 800;
-    color: var(--background-footer);
-}
-
-h1{
-    font-size: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    text-align: left;
-}
-
-h2{
-    font-size: 2rem;
-    padding: 2rem;
-
-}
-
-h3{
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-a{
-    text-decoration: none;
-}
-
-h2,
-h3,
-a{
-    text-align: center;
-}
-
-body{
-    background-color:var(--background-body);
-}
-
-nav{
-    margin: 0 auto;
-    width: 80vw;
-    background-color: var(--background-nav);
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    padding: 2.25rem 1.5rem;
-    box-shadow: 2px 2px 5px var(sombra);
-    border-radius: 16px;
-}
-
-.logo{
-    display: flex;
-    width: 20%;
-    justify-content: left;
-    position: relative;
-    align-items: center;
-
-}
-
-.icone{
-    width: 6rem;
-    padding: 1rem;
-    border-radius: 9999px;
-}
-
-.titulo{
-    font-family: 'lato', cursive;
-    color: white;
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    font-weight: 800;
-
-}
-
-ul{
-    list-style: none;
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    font-size: 24px;
-    color: white;
-}
-
-nav a{
-    color: white;
-}
-main{
-    width: 80vw;
-    margin: 0 auto;
-}
 
 #sobre{
     display: flex;
@@ -140,101 +23,12 @@ main{
     gap: 20px;
 }
 
-.foto{
-    width: 200px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 5px var(--sombra);
-}
-
-#videoyt{
-    display: block;
-    margin: 0 auto;
-    width: 60%;
-    gap: 2rem;
-    border-radius: 8px;
-}
-
-footer{
-    margin: 0 auto;
-    margin-top: 5rem;
-    width: 80vw;
-    text-align: center;
-    background-color: var(--background-footer);
-    border-radius: 16px;
 
 
-}
-
-.redes_sociais{
-    display: flex;
-    justify-content: center;
-}
-
-.icons{
-    
-    width: 3rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.by{
-    padding-bottom: 1rem;
-    color: white;
-}
-
-
-.contato{
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    padding: 40px;
-}
-
-.endereco{
-    font-family: 'lato' Roboto;
-    color: gray;
-    font-size: 1rem;
-
-}
-
-.formulario{
-    width: 50%;
-}
-
-hr{
-    margin: 1rem;
-}
-
-label{
-    font-family: 'lato' Roboto;
-    color: black;
-    font-size: 1.25rem;
-}
-
-input,
-textarea,
-button{
-    font-family: 'lato', Roboto;
-    width: 100%;
-    margin-top: o.25rem;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: black;
-}
 
 button{
     font-family: 'lato' Roboto;
     background-color: var(--background-nav);
     font-weight: 800;
     color: white;
-}
-
-button:hover{
-    background-color: gray;
-}
-
-input::placeholder,
-textarea::placeholder{
-    color: var(gray);
 }
