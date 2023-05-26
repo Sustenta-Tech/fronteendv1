@@ -7,17 +7,15 @@ import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../../models/Produto';
-// import ModalPostagem from '../modalPostagem/ModalPostagem';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListaProdutos() {
 
     const [produtos, setProdutos] = useState<Produto[]>([])
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
-    // const token = useSelector<TokenState, TokenState["tokens"]>(
-    //     (state) => state.tokens
-    // );
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == '') {
