@@ -1,6 +1,8 @@
 .navbar {
-    background-color: black !important;
-    color: white !important;
+    /* background-color: #061b14 !important; */
+    color: rgb(202, 32, 32) !important;
+
+    /* background-color: var(--cor-verde-escuro) !important; */
 }
 
 .cursor {

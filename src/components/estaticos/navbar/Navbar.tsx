@@ -49,6 +49,13 @@ function Navbar() {
                                 </Typography>
                             </Box>
                         </Link>
+                        <Link to='/admin' className='text-decorator-none'>
+                            <Box mx={1} className='cursor'>
+                                <Typography variant='h6' >
+                                    Admin
+                                </Typography>
+                            </Box>
+                        </Link>
 
                     </Box>
 
