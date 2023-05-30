@@ -7,14 +7,10 @@ function Contato() {
     const [enviado, setEnviado] = useState(false);
 
     const handleEnviar = () => {
-        // Lógica para enviar a mensagem
-
-        // Define o estado de enviado para true
         setEnviado(true);
     };
 
     const handleFecharSnackbar = () => {
-        // Define o estado de enviado para false para fechar o Snackbar
         setEnviado(false);
     };
 
@@ -25,6 +21,12 @@ function Contato() {
                     <Box textAlign='center'>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' className='textoCadastro'>Contato</Typography>
                         <Typography variant='h6' color='textPrimary' align='center'>Confira nossos canais de contato. Se preferir, preencha o formulário ao lado para nos contatar.</Typography>
+                        <Typography variant='h6' color='textPrimary' align='center' className="telicon">
+                            <img src="src\imagens\telefone-icon.png" alt="Ícone de telefone" /> (XX)XXXXX-XXXX
+                        </Typography>
+                        <Typography variant='h6' color='textPrimary' align='center' className="emailicon">
+                            <img src="src\imagens\email-icon.png" alt="Ícone de telefone" /> sustentatechintegrador@gmail.com
+                        </Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} alignItems='center'>

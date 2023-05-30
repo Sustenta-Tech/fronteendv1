@@ -11,7 +11,6 @@
     width: 80%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Roboto:wght@100;500&display=swap');
 
 
 #sobre{
@@ -32,3 +31,16 @@ button{
     font-weight: 800;
     color: white;
 }
+
+
+  .telicon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .emailicon img {
+    width: 30px;
+    height: 30px;
+  }
+
+
