@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './ListaProdutos.css';
 import { busca, buscaProduto } from '../../../services/Service';
@@ -61,7 +61,7 @@ function ListaProdutos() {
                         <Card variant="outlined" className='cardPostagem'>
                             <CardContent >
                                 <Typography variant="h5" component="h2">
-                                    <img src={`${produto.foto}`} alt="" className='imagempost' referrerPolicy="no-referrer"/>
+                                    <img src={`${produto.foto}`} alt="" className='imagempost' referrerPolicy="no-referrer" />
                                 </Typography>
                                 <Typography variant="h5" component="h2">
                                     {produto.nome}
@@ -70,13 +70,13 @@ function ListaProdutos() {
                                     {produto.descricao}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                <b>Preço:</b> R$ {produto.preco}
+                                    <b>Preço:</b> R$ {produto.preco}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                <b>Quantidade em estoque:</b> {produto.quantidade}
+                                    <b>Quantidade em estoque:</b> {produto.quantidade}
                                 </Typography>
                                 <Typography variant="body2" component="p" color="textSecondary">
-                                <b>Categoria:</b> {produto.categoria?.tipo}
+                                    <b>Categoria:</b> {produto.categoria?.tipo}
                                 </Typography>
                             </CardContent>
                             <CardActions>
