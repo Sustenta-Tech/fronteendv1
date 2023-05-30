@@ -136,7 +136,7 @@ function CadastroProduto() {
     }
 
     function back() {
-        navigate('/produtos')
+        navigate('/admin')
     }
 
     return (

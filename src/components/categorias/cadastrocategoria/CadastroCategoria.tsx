@@ -92,7 +92,7 @@ function CadastroCategoria() {
     }
 
     function back() {
-        navigate('/categorias')
+        navigate('/admin')
     }
 
 
