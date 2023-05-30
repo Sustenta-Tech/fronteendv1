@@ -16,20 +16,23 @@ function Contato() {
 
     return (
         <>
-            <Grid container direction='row' justifyContent='center' alignItems='center'>
-                <Grid item xs={12} sm={4}>
+            <Grid container direction='row' justifyContent='center' alignItems='center' style={{ backgroundColor:"#8cb570" }}>
+                <Grid item xs={12} sm={6} className="alinhamento">
                     <Box textAlign='center'>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' className='textoCadastro'>Contato</Typography>
-                        <Typography variant='h6' color='textPrimary' align='center'>Confira nossos canais de contato. Se preferir, preencha o formulário ao lado para nos contatar.</Typography>
-                        <Typography variant='h6' color='textPrimary' align='center' className="telicon">
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' className='textoPrimario'>Contato</Typography>
+                        <Typography variant='h6' color='textPrimary' align='center' className='textoSecundario'paragraph>Confira nossos canais de contato. Se preferir, preencha o formulário ao lado para nos contatar.</Typography>
+                        <Typography variant='h6' color='textPrimary' align='center' className="telicon" paragraph>
                             <img src="src\imagens\telefone-icon.png" alt="Ícone de telefone" /> (XX)XXXXX-XXXX
                         </Typography>
-                        <Typography variant='h6' color='textPrimary' align='center' className="emailicon">
-                            <img src="src\imagens\email-icon.png" alt="Ícone de telefone" /> sustentatechintegrador@gmail.com
+                        <Typography variant='h6' color='textPrimary' align='center' className="emailicon" paragraph>
+                            <img src="src\imagens\email-icon.png" alt="Ícone de email" /> sustentatechintegrador@gmail.com
+                        </Typography>
+                        <Typography variant='h6' color='textPrimary' align='center' className="emailicon" paragraph>
+                            <img src="src\imagens\localizacao-icon.png" alt="Ícone de localizacao" /> Endereço: Rua X n°00, Bairro Y São Paulo - SP
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={6} alignItems='center'>
+                <Grid item xs={12} sm={4} alignItems='center' style={{ backgroundColor:"#fff" }}>
                     <main className="contato">
                         <form className="formulario">
                             <TextField
