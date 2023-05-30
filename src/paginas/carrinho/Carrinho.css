@@ -1,0 +1,28 @@
+.carrinho {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  .carrinho h2 {
+    margin-bottom: 10px;
+  }
+  
+  .carrinho ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .carrinho li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .carrinho .total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+  }

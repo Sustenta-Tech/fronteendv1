@@ -13,6 +13,10 @@ import ListaProdutos from './components/produtos/listaproduto/ListaProdutos';
 import CadastroProduto from './components/produtos/cadastroproduto/CadastroProduto';
 import ListaCategoria from './components/categorias/listacategoria/ListaCategoria';
 import CadastroCategoria from './components/categorias/cadastrocategoria/CadastroCategoria';
+import DeletarProduto from './components/produtos/deletarproduto/DeletarProduto';
+import Admin from './paginas/admin/Admin';
+import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCategoria';
+
 
 function App() {
   const THEME = createTheme({
@@ -45,11 +49,21 @@ function App() {
             <Route path="/produtos" element={<ListaProdutos />} />
             <Route path="/categorias" element={<ListaCategoria />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="/login" element={<Login />} />
+
             <Route path="/cadastro" element={<CadastroUsuario />} />
+            {/* <Route path="/carrinho" element={<Carrinho />} /> */}
 
             <Route path="/formularioProduto" element={<CadastroProduto />} />
+            <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
+            <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+
             <Route path="/formularioCategoria" element={<CadastroCategoria />} />
+            <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
+            <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+
+
             
           </Routes>
           <Footer />
