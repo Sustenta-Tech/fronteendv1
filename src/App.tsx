@@ -13,13 +13,10 @@ import ListaProdutos from './components/produtos/listaproduto/ListaProdutos';
 import CadastroProduto from './components/produtos/cadastroproduto/CadastroProduto';
 import ListaCategoria from './components/categorias/listacategoria/ListaCategoria';
 import CadastroCategoria from './components/categorias/cadastrocategoria/CadastroCategoria';
-<<<<<<< HEAD
-import Carrinho from './paginas/carrinho/Carrinho';
-=======
 import DeletarProduto from './components/produtos/deletarproduto/DeletarProduto';
 import Admin from './paginas/admin/Admin';
 import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCategoria';
->>>>>>> 1a60d566a51d3022dec12565115b00fb1ea6065e
+
 
 function App() {
   const THEME = createTheme({
@@ -56,7 +53,7 @@ function App() {
             <Route path="/login" element={<Login />} />
 
             <Route path="/cadastro" element={<CadastroUsuario />} />
-            <Route path="/carrinho" element={<Carrinho />} />
+            {/* <Route path="/carrinho" element={<Carrinho />} /> */}
 
             <Route path="/formularioProduto" element={<CadastroProduto />} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
