@@ -13,6 +13,7 @@ import ListaProdutos from './components/produtos/listaproduto/ListaProdutos';
 import CadastroProduto from './components/produtos/cadastroproduto/CadastroProduto';
 import ListaCategoria from './components/categorias/listacategoria/ListaCategoria';
 import CadastroCategoria from './components/categorias/cadastrocategoria/CadastroCategoria';
+import Carrinho from './paginas/carrinho/Carrinho';
 
 function App() {
   const THEME = createTheme({
@@ -47,6 +48,7 @@ function App() {
             <Route path="/contato" element={<Contato />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<CadastroUsuario />} />
+            <Route path="/carrinho" element={<Carrinho />} />
 
             <Route path="/formularioProduto" element={<CadastroProduto />} />
             <Route path="/formularioCategoria" element={<CadastroCategoria />} />
