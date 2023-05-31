@@ -32,7 +32,7 @@ function Contato() {
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={4} alignItems='center' style={{ backgroundColor:"#fff" }}>
+                <Grid item xs={12} sm={4} alignItems='center' style={{ backgroundColor:"#fff" }} className="teste">
                     <main className="contato">
                         <form className="formulario">
                             <TextField
