@@ -52,23 +52,22 @@ function DeletarCategoria() {
     }
 
     function sim() {
+         navigate('/admin')
         deleteId(`/categorias/${id}`, {
             headers: {
                 'Authorization': token
             }
         });
-        alert('Categoria deletada com sucesso');
-        navigate('/admin')
-        // toast.success('Produto deletada com sucesso', {
-        //     position: "top-right",
-        //     autoClose: 3000,
-        //     hideProgressBar: false,
-        //     closeOnClick: true,
-        //     pauseOnHover: false,
-        //     draggable: false,
-        //     theme: "colored",
-        //     progress: undefined,
-        // });
+        toast.success('Produto deletada com sucesso', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
     }
 
     function nao() {

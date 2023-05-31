@@ -21,7 +21,6 @@ function ListaCategoria() {
 
     useEffect(() => {
         if (token == '') {
-            // alert("Você precisa estar logado")
             toast.error('Você precisa estar logado', {
                 position: "top-right",
                 autoClose: 3500,

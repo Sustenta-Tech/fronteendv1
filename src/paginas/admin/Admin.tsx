@@ -45,17 +45,17 @@ function Admin() {
     
     return (
         <>
-            <Box m={2} justifyItems='center'>
+            <Box m={2} display="flex" justifyContent="center">
 
-                <Link to="/formularioProduto" >
-                    <Button variant="contained" className="marginLeft" size='small' color="primary">
+                <Link to="/formularioProduto">
+                    <Button variant="contained" size='small' color="primary">
                         Cadastrar um novo produto
                     </Button>
                 </Link>
 
-                <Link to="/formularioCategoria" >
-                    <Button variant="contained" className="marginLeft" size='small' color="primary">
-                        Cadastrar um nova categoria
+                <Link to="/formularioCategoria">
+                    <Button variant="contained" size='small' color="primary" style={{ marginLeft: '10px' }}>
+                        Cadastrar uma nova categoria
                     </Button>
                 </Link>
 
