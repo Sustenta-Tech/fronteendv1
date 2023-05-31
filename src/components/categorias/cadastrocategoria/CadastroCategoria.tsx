@@ -13,7 +13,6 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 function CadastroCategoria() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
-    // const [token, setToken] = useLocalStorage('token');
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );

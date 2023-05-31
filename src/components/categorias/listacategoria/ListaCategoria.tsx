@@ -52,13 +52,6 @@ function ListaCategoria() {
 
     return (
         <>
-            {/* <Box m={2} justifyItems='center'>
-                <Link to="/formularioTema">
-                    <Button variant="contained" className="marginLeft" size='small' color="primary">
-                        Cadastrar um novo tema
-                    </Button>
-                </Link>
-            </Box> */}
             {
                 categorias.map(categoria => (
                     <Box m={2} >
