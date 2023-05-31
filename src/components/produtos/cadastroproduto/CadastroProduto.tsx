@@ -140,10 +140,11 @@ function CadastroProduto() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
+        <Container maxWidth="sm" className="topo" >
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Cadastro de produtos</Typography>
-
+            
+                <Typography variant="h3" color="textSecondary" component="h1" align="left" >Cadastro de produtos</Typography>
+                    
                 <TextField
                     value={produto.foto}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
