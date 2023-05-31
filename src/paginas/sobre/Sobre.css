@@ -1,5 +1,20 @@
-.caixa{
-    background-color: white;
+ .caixa{
+    /* background-color: white;  */
+} 
+
+.cardmissao{
+    background-color: #8cb570;
+    color:#fff;
+}
+
+.cardtech{
+    background-color: #061b14;
+    color:#fff !important;
+}
+
+.devscard{
+    color:#fff !important;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 .titulo{
