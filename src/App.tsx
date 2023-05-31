@@ -1,6 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
+
+// Token
+import { Provider } from 'react-redux';
+import store from './store/store';
+
 import './App.css'
 import Footer from './components/estaticos/footer/Footer'
 import Navbar from './components/estaticos/navbar/Navbar'
@@ -39,6 +44,7 @@ function App() {
   return (
     <>
       <MuiThemeProvider theme={THEME}>
+      <Provider store={store}>
 
         <BrowserRouter>
           <Navbar />
@@ -68,6 +74,7 @@ function App() {
           </Routes>
           <Footer />
         </BrowserRouter>
+        </Provider>
       </MuiThemeProvider>
 
     </>
