@@ -22,6 +22,8 @@ import DeletarProduto from './components/produtos/deletarproduto/DeletarProduto'
 import Admin from './paginas/admin/Admin';
 import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCategoria';
 import Carrinho from './paginas/carrinho/Carrinho';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -46,7 +48,7 @@ function App() {
     <>
       <MuiThemeProvider theme={THEME}>
       <Provider store={store}>
-
+        <ToastContainer />
         <BrowserRouter>
           <Navbar />
           <Routes>
