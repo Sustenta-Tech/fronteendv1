@@ -6,6 +6,7 @@ import { busca } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import './AdminCardProduto.css'
 
 function AdminCardProduto() {
 
@@ -40,7 +41,7 @@ function AdminCardProduto() {
         <>
             {
                 produtos.map(produto => (
-                    <Box m={2} >
+                    <Box m={2} className='AdminCardProduto'>
                         <Card variant="outlined" className='cardPostagem'>
                             <CardContent >
                                 <Typography variant="h5" component="h2">

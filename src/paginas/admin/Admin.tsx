@@ -42,26 +42,32 @@ function Admin() {
         setValue(newValue);
     }
 
-    
+
     return (
         <>
-            <Box m={2} display="flex" justifyContent="center">
+            <Box display="flex" justifyContent="center" className='border1'>
+                <img src="src\imagens\PainelAdministrativo.png" alt="" className='border2'/>
+            </Box>
+
+            <Box m={2} display="flex" justifyContent="center" >
 
                 <Link to="/formularioProduto">
-                    <Button variant="contained" size='small' color="primary">
+                    <Button variant="contained" size='small' color="secondary">
                         Cadastrar um novo produto
                     </Button>
                 </Link>
 
                 <Link to="/formularioCategoria">
-                    <Button variant="contained" size='small' color="primary" style={{ marginLeft: '10px' }}>
+                    <Button variant="contained" size='small' color="secondary" style={{ marginLeft: '10px' }}>
                         Cadastrar uma nova categoria
                     </Button>
                 </Link>
 
             </Box>
 
-            <TabContext value={value}>
+
+
+            <TabContext value={value} >
 
 
                 <AppBar position="static">
@@ -71,15 +77,15 @@ function Admin() {
                     </Tabs>
                 </AppBar>
 
-                <TabPanel value="1" >
-                    <Box display="flex" flexWrap="wrap" justifyContent="center">
+                <TabPanel value="1" className='bodyTab' >
+                    <Box display="flex" flexWrap="wrap" justifyContent="center" >
                         <AdminCardProduto />
                     </Box>
                 </TabPanel>
 
 
 
-                <TabPanel value="2">
+                <TabPanel value="2" className='bodyTab'>
                     <Box display="flex" flexWrap="wrap" justifyContent="center">
                         <AdminCardCategoria />
                     </Box>
