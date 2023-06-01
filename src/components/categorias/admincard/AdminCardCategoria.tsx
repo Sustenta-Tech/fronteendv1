@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import Categoria from '../../../models/Categoria';
 import { busca } from '../../../services/Service';
+import { toast } from 'react-toastify';
 
 function AdminCardCategoria() {
 
@@ -14,13 +15,6 @@ function AdminCardCategoria() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
-
-    useEffect(() => {
-        if (token == '') {
-            alert("Você precisa estar logado")
-            navigate("/login")
-        }
-    }, [token])
 
     async function getCategoria() {
         await busca("/categorias", setCategorias, {

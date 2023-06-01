@@ -7,6 +7,7 @@ import Produto from '../../../models/Produto';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import './AdminCardProduto.css'
+import { toast } from 'react-toastify';
 
 function AdminCardProduto() {
 
@@ -15,14 +16,7 @@ function AdminCardProduto() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
-
-    useEffect(() => {
-        if (token == '') {
-            alert("Você precisa estar logado")
-            navigate("/login")
-        }
-    }, [token])
-
+    
     async function getProdutos() {
         await busca("/produtos", setProdutos, {
             headers: {
