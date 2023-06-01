@@ -53,7 +53,7 @@ function Login() {
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
-                });
+            });
         } catch (error) {
             toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
                 position: "top-right",
@@ -64,7 +64,7 @@ function Login() {
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
-                });
+            });
         }
 
         // console.log('userLogin: ' + Object.values(userLogin));
@@ -72,21 +72,24 @@ function Login() {
 
     return (
         <Grid container direction='row' className='grid'>
-            
+
             <Grid xs={6} container direction='row' justifyContent='flex-end'>
                 <Box className='cardInfo'>
                     <form onSubmit={onSubmit}>
 
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='tituloLogin'>
-                            Entrar
-                        </Typography>
+                        <Box textAlign='center'>
+                            {/* <img src='src\imagens\logo+nome.png' /> */}
+                            <Typography variant='h5' gutterBottom color='primary' component='h3' align='center' className='tituloLogin'>
+                                Entrar
+                            </Typography>
+                        </Box>
 
                         <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='usuario' label='E-mail' name='usuario' margin='normal' fullWidth />
 
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='Senha' name='senha' margin='normal' type='password' fullWidth />
 
                         <Box marginTop={2} textAlign='center'>
-                            <Button type='submit' variant='contained' id='buttonEntrar' className='button'>
+                            <Button type='submit' variant='contained' color="primary" id='buttonEntrar'>
                                 Acessar
                             </Button>
                         </Box>
@@ -107,6 +110,7 @@ function Login() {
                                 Cadastre-se
                             </Button>
                         </Link>
+                        
                     </Box>
                 </Box>
             </Grid>

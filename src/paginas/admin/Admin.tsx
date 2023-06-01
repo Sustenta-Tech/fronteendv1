@@ -46,7 +46,7 @@ function Admin() {
     return (
         <>
             <Box display="flex" justifyContent="center" className='border1'>
-                <img src="src\imagens\PainelAdministrativo.png" alt="" className='border2'/>
+                <img src="src\imagens\PainelAdministrativo.png" alt="Foto apresentando o Painel Administrativo" />
             </Box>
 
             <Box m={2} display="flex" justifyContent="center" >

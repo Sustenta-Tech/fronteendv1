@@ -12,7 +12,7 @@ function Footer() {
     return (
         <>
             <Grid container xs={12}>
-                <Grid item xs={2}>
+                <Grid item xs>
                     <Box display="flex" flexDirection="column">
                         <Typography variant="h6" align="center" className='titulo'>Redes Sociais</Typography>
                         <Box display="flex" alignItems="center" justifyContent="center">
