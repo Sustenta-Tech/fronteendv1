@@ -1,6 +1,10 @@
+.gridFooter {
+  padding: 30px;
+}
 .footer {
-   background-color: #061b14 !important; 
-  /* color: rgb(18, 46, 11) !important; */
-  /* background-color: rgb(56, 2, 2) !important; */
+  background-color: #061b14;
 }
 
+.textFooter {
+  font-size: 0.8rem !important;
+}

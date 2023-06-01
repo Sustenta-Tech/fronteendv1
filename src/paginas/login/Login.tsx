@@ -35,7 +35,7 @@ function Login() {
     useEffect(() => {
         if (token != '') {
             dispatch(addToken(token))
-            history('/home')
+            history('/admin')
         }
     }, [token])
 
@@ -72,7 +72,6 @@ function Login() {
 
     return (
         <Grid container direction='row' className='grid'>
-
             <Grid xs={6} container direction='row' justifyContent='flex-end'>
                 <Box className='cardInfo'>
                     <form onSubmit={onSubmit}>
@@ -99,7 +98,7 @@ function Login() {
 
             <Grid xs={6} container direction='row' justifyContent='flex-start'>
                 <Box paddingX={5} className='cardVerde'>
-                    <Typography variant='h3' gutterBottom component='h3' className='subtitulo'>
+                    <Typography variant='h3' gutterBottom component='h3' className='subtituloLogin'>
                         Ainda não tem cadastro?
                     </Typography>
                     <p className="texto">Se cadastre no link abaixo para conseguir efetuar as suas compras e aproveitar ainda mais o nosso site!</p>

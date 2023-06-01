@@ -10,32 +10,32 @@ const Carrinho: React.FC = () => {
         </nav>
         <section>
           <div className='card'>
-            <img src='https://imgur.com/T8eGcsh.png' alt='refletorsolar' />
+            <img src='https://imgur.com/T8eGcsh.png' alt='imagem do produto' referrerPolicy="no-referrer"/>
             <h1>Refletor de LED e energia solar</h1>
-            <h1>Preço: R$ 239,00</h1>
+            <h1>Preço: R$ 30,00</h1>
             <button>Remover</button>
           </div>
           <div className='card'>
-            <img src='' alt='' />
-            <h1>Produto 2</h1>
-            <h1>Preço: R$ 00,00</h1>
+            <img src='https://i.imgur.com/kWJQe9y.png' alt='imagem do produto' referrerPolicy="no-referrer"/>
+            <h1>Blocos de Vidro</h1>
+            <h1>Preço: R$ 17,00</h1>
             <button>Remover</button>
           </div>
           <div className='card'>
-            <img src='' alt='' />
-            <h1>Produto 3</h1>
-            <h1>Preço: R$ 00,00</h1>
+            <img src='https://i.imgur.com/MfTFT5M.png' alt='imagem do produto' referrerPolicy="no-referrer"/>
+            <h1>Lâmpada Sustentavel</h1>
+            <h1>Preço: R$ 39,00</h1>
             <button>Remover</button>
           </div>
         </section>
-        <footer>
+        <section className='sectionTotalCar'>
           <ul>
             <li>
-              <span>Valor Total: R$00,00</span>
+              <span>Valor Total:      R$ 86,00</span>
               <button>Finalizar</button>
             </li>
           </ul>
-        </footer>
+        </section>
       </main>
     </>
   );

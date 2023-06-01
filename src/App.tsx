@@ -12,7 +12,7 @@ import Navbar from './components/estaticos/navbar/Navbar'
 import Contato from './paginas/contato/Contato'
 import Home from './paginas/home/Home'
 import Sobre from './paginas/sobre/Sobre'
-import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsusario';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Login from './paginas/login/Login';
 import ListaProdutos from './components/produtos/listaproduto/ListaProdutos';
 import CadastroProduto from './components/produtos/cadastroproduto/CadastroProduto';
@@ -71,8 +71,6 @@ function App() {
             <Route path="/formularioCategoria" element={<CadastroCategoria />} />
             <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
-
-
             
           </Routes>
           <Footer />

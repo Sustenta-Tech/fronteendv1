@@ -11,77 +11,68 @@ import { Box } from '@mui/material'
 function Footer() {
     return (
         <>
-            <Grid container xs={12}>
-                <Grid item xs>
+            <Grid container xs={12} className="gridFooter">
+                <Grid item xs={2} >
                     <Box display="flex" flexDirection="column">
-                        <Typography variant="h6" align="center" className='titulo'>Redes Sociais</Typography>
+                        <Typography variant="h6" align="center">Redes Sociais</Typography>
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 40, color: "black" }} />
+                                <LinkedInIcon style={{ fontSize: 35, color: "black" }} />
                             </a>
                             <a href="/" target="_blank">
-                                <GitHubIcon style={{ fontSize: 40, color: "black" }} />
+                                <GitHubIcon style={{ fontSize: 35, color: "black" }} />
                             </a>
                             <a href="/" target="_blank">
-                                <WhatsappIcon style={{ fontSize: 40, color: "black" }} />
+                                <WhatsappIcon style={{ fontSize: 35, color: "black" }} />
                             </a>
                         </Box>
                     </Box>
                 </Grid>
                 <Grid item xs={2}>
                     <Box display="flex" flexDirection="column">
-                        <Typography variant="h6" align="left" className='titulo'>Formas de Pagamento</Typography>
-                        <Box display="flex" alignItems="left" justifyContent="left">
+                        <Typography variant="h6" align="center" >Formas de Pagamento</Typography>
+                        <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="/" target="_blank">
-                                <CreditCardIcon style={{ fontSize: 40, color: "black" }} />
+                                <CreditCardIcon style={{ fontSize: 35, color: "black" }} />
                             </a>
                             <a href="/" target="_blank">
-                                <PhoneIphoneIcon style={{ fontSize: 40, color: "black" }} />
+                                <PhoneIphoneIcon style={{ fontSize: 35, color: "black" }} />
                             </a>
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={2}>
-                    <Box display="flex" flexDirection="column" alignItems="center" style={{ width: "300px" }}>
-                        <Typography variant="h6" align="center" className='titulo'>SustentaTech</Typography>
-                        <Typography align="center" gutterBottom style={{ color: "black" }}>O ecommerce SustentaTech não apenas oferece boas compras, mas também permite que você ajude o meio ambiente ao colaborar com a Agenda 2030 da ONU.</Typography>
+                <Grid item xs={3}  >
+                    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" >
+                        <Typography variant="h6" align="center" >SustentaTech</Typography>
+                        <Typography align="center" gutterBottom className="textFooter">O ecommerce SustentaTech não apenas oferece boas compras, mas também permite que você ajude o meio ambiente ao colaborar com a Agenda 2030 da ONU.</Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={2}>
-                    <Box display="flex" alignItems="right" justifyContent="right" >
-                        <Typography variant="h6" align="right" className='titulo'>Projeto</Typography>
-                    </Box>
-                    <Box display="flex" alignItems="right" justifyContent="right" >
-                        <img src='src\imagens\logo+nome.png' alt="logo" />
-                    </Box>
+                <Grid item xs={5}>
+                    <Box display="flex" justifyContent="space-around" >
+                        <Box alignItems="center" justifyContent="center" >
+                            <Typography variant="h6" align="center" >Projeto</Typography>
+                            <img src='src\imagens\logo+nome.png' alt="logo" />
+                        </Box>
 
-                </Grid>
-                <Grid item xs={2}>
-                    <Box display="flex" justifyContent="center">
-                        <Typography variant="h6" align="right" className='titulo'>Patrocinador</Typography>
-                    </Box>
-                    
-                        <Box display="flex" justifyContent="center" >
-                        <img src='src\imagens\Sumup.png' alt="logo" />
-                    </Box>
-                </Grid>
-                <Grid item xs={2}>
-                    <Box display="flex" justifyContent="left">
-                        <Typography variant="h6" align="left" className='titulo'>Apoio</Typography>
-                    </Box>
-                    <Box display="flex"  justifyContent="left"  >
-                        <img src='src\imagens\logoGen.png' alt="logo" />
-                    </Box>
+                        <Box justifyContent="center">
+                            <Typography variant="h6" align="center">Patrocinador</Typography>
+                            <img src='src\imagens\Sumup.png' alt="logo" />
+                        </Box>
 
-                </Grid>
-                <Grid item xs={12}>
-                    <Box className='footer' style={{  height: "60px" }}>
-                        <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="left" gutterBottom style={{ color: "white" }}>© 2023 | Todos os direitos reservados</Typography>
+                        <Box justifyContent="center">
+                            <Typography variant="h6" align="center">Apoio</Typography>
+                            <img src='src\imagens\logoGen.png' alt="logo" />
                         </Box>
                     </Box>
                 </Grid>
             </Grid >
+            <Grid item xs={12} >
+                <Box className='footer' style={{ height: "45px" }}>
+                    <Box paddingTop={1} >
+                        <Typography variant="subtitle2" align="left" gutterBottom style={{ color: "white" }}>© 2023 | Todos os direitos reservados</Typography>
+                    </Box>
+                </Box>
+            </Grid>
         </>
     )
 }

@@ -1,68 +1,57 @@
- .caixa{
-    /* background-color: white;  */
-} 
+ .caixa {
+     /* background-color: white;  */
+ }
 
-.cardmissao{
-    background-color: #8cb570;
-    color:#fff;
-    font-family: 'Open Sans', sans-serif !important; 
-    min-height: 300px; 
-}
+ .subtituloSobre {
+     color: #8cb570;
+ }
 
-.cardtech{
-    background-color: #061b14;
-    color:#fff !important;
+ .cardmissao {
+     background-color: #8cb570;
+     color: #fff;
+     font-family: 'Open Sans', sans-serif !important;
+     min-height: 300px;
+ }
+
+ .cardtech {
+     background-color: #061b14;
+     color: #fff !important;
      min-height: 300px;
      padding: 20px;
-}
+ }
 
-.devscard{
-    color:#fff !important;
-    font-family: 'Open Sans', sans-serif !important;
-}
+ .devscard {
+     border-top: #8cb570 solid 2px;
+     padding-top: 10px;
+     color: #fff !important;
+     /* min-height: 155px;  */
+ }
 
-.devscard2{
-    color:black !important;
-    font-family: 'Open Sans', sans-serif !important;
-}
+ #devsFila1 {
+     /* height: 220px;  */
+ }
+
+ .devscard2 {
+     color: black !important;
+     font-family: 'Open Sans', sans-serif !important;
+ }
 
 
-.titulo{
-   color: black !important;
-   font-family: 'Open Sans', sans-serif !important;
-   min-height: 300px;  
-}
+ .titulo {
+     color: black !important;
+     font-family: 'Open Sans', sans-serif !important;
+     min-height: 300px;
+     padding: 50px;
+ }
 
-.cardicons{
-    color: #8cb570;
-    border-top: #8cb570 solid 2px;
-    margin-top: 15px;
-    padding: 5px;
-}
+ .cardicons {
+     color: #8cb570;
+     border-top: #8cb570 solid 2px;
+     margin-top: 15px;
+     padding: 5px;
+ }
 
-/* .imagemlogo {
-    background-image: url(https://media.discordapp.net/attachments/1092433236082303086/1108378950880743494/WhatsApp_Image_2023-05-15_at_9.07.00_PM-removebg-preview.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100vh;
-    min-height: 100vh; 
-}
-
-.imagem {
-    background-image: url(https://i.imgur.com/3CytTdi.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100vh;
-    min-height: 100vh; 
-}
-
-.imagemlampada {
-    background-image: url(https://cdn.pixabay.com/photo/2020/06/04/15/56/light-bulb-5259340_1280.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100vh;
-    min-height: 100vh; 
-}  */
+ .fotosDev {
+     max-height: 180px;
+     /* border: red 1px solid; */
+ }

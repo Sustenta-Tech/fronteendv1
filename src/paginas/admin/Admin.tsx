@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { AppBar, Button, Tab, Tabs, Typography } from '@material-ui/core';
+import { AppBar, Button, Tab, Tabs } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { TabContext, TabPanel } from '@material-ui/lab';
 import './Admin.css';
@@ -20,17 +20,16 @@ function Admin() {
 
     useEffect(() => {
         if (token == "") {
-            // toast.error('Você precisa estar logado', {
-            //     position: "top-right",
-            //     autoClose: 2000,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: false,
-            //     draggable: false,
-            //     theme: "colored",
-            //     progress: undefined,
-            // });
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
             navigate("/login")
 
         }

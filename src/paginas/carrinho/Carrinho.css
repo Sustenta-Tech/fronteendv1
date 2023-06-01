@@ -1,7 +1,7 @@
 .bodycar {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   background-color: #8cb570;
 }
 
@@ -70,20 +70,20 @@ section {
   cursor: pointer;
 }
 
-footer {
+.sectionTotalCar {
   margin-top: 20px;
   border-radius: 5px;
-  width: 300px;
+  width: 95vw;
   height: 100px;
-  
+  margin-inline: auto;
 }
 
-footer ul {
+.sectionTotalCar ul {
   list-style-type: none;
   padding: 0;
 }
 
-footer li {
+.sectionTotalCar li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,16 +94,16 @@ footer li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-footer h2 {
+.sectionTotalCar h2 {
   margin: 0;
   font-size: 16px;
 }
 
-footer span {
+.sectionTotalCar span {
   font-weight: bold;
 }
 
-footer button {
+.sectionTotalCar button {
   padding: 5px 10px;
   background-color:#007bff;
   color: #fff;
@@ -111,3 +111,4 @@ footer button {
   border-radius: 3px;
   cursor: pointer;
 }
+

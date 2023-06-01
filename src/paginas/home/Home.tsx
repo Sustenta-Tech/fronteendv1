@@ -9,14 +9,14 @@ import ListaProdutos from "../../components/produtos/listaproduto/ListaProdutos"
 function Home() {
     return (
         <>
-            <Grid container style={{ marginTop: "8px" }}>
+            <Grid container >
                 <Grid item xs={12}>
                     <Carrossel />
                     <ListaProdutos />
                 </Grid>
             </Grid>
 
-            <Grid container style={{ marginTop: "8px" }}>
+            <Grid container >
                 <Grid item xs={12}>
                     <CarrosselInfo />
                 </Grid>
