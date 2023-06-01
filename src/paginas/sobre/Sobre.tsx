@@ -1,9 +1,9 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
-import WhatsappIcon from '@material-ui/icons/Whatsapp';
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import GitHubIcon from '@material-ui/icons/GitHub'
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import './Sobre.css'
 
 function Sobre() {
@@ -66,7 +66,7 @@ function Sobre() {
                 <Grid item xs={3}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="src\imagens\marcal.png" className="fotosDev" />
-                        <Typography variant="body3" gutterBottom component="h3" align="center" >Andresa Marçal</Typography>
+                        <Typography variant="h6" gutterBottom component="h3" align="center" className="nomeDev">Andresa Marçal</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard' id="devsFila1">Com formação em Recursos Humanos, atualmente curso Análise e Desenvolvimento de Sistemas. Sou apaixonada por desafios e na Tecnologia, encontrei a paixão que me impulsiona a aprender e evoluir constantemente.</Typography>
 
@@ -78,7 +78,7 @@ function Sobre() {
                                 <GitHubIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                             <a href="https://wa.me/552196719599" target="_blank">
-                                <WhatsappIcon style={{ fontSize: 40, margin: 5 }} />
+                                <WhatsAppIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                         </Box>
                     </Box>
@@ -87,7 +87,7 @@ function Sobre() {
                 <Grid item xs={3}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="src\imagens\camillo.jpeg" className="fotosDev"/>
-                        <Typography variant="body3" gutterBottom component="h3" align="center">Andressa Camillo</Typography>
+                        <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center">Andressa Camillo</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard' id="devsFila1">Me formei em Comunicação Social e fiz do Bootcamp de Pessoa Desenvolvedora minha escola. Acredito que a combinação de Programação e Comunicação resultam excelentes projetos quando presentes em uma equipe.</Typography>
 
@@ -99,7 +99,7 @@ function Sobre() {
                                 <GitHubIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                             <a href="https://wa.me/5511993291856" target="_blank">
-                                <WhatsappIcon style={{ fontSize: 40, margin: 5 }} />
+                                <WhatsAppIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                         </Box>
                     </Box>
@@ -108,7 +108,7 @@ function Sobre() {
                 <Grid item xs={3}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="src\imagens\daisy.png" className="fotosDev"/>
-                        <Typography variant="body3" gutterBottom component="h3" align="center">Daisy Viana</Typography>
+                        <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center">Daisy Viana</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard' id="devsFila1">Como Desenvolvedora, estou aprimorando minhas habilidades para desenvolver soluções eficazes. Determinada e apaixonada por Programação, meu objetivo é me tornar uma excelente Desenvolvedora.</Typography>
 
@@ -120,7 +120,7 @@ function Sobre() {
                                 <GitHubIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                             <a href="https://wa.me/5511963821313" target="_blank">
-                                <WhatsappIcon style={{ fontSize: 40, margin: 5 }} />
+                                <WhatsAppIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                         </Box>
                     </Box>
@@ -129,7 +129,7 @@ function Sobre() {
                 <Grid item xs={3}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="src\imagens\giselle_foto.png" className="fotosDev"/>
-                        <Typography variant="body3" gutterBottom component="h3" align="center" >Giselle Souza</Typography>
+                        <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center" >Giselle Souza</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard' id="devsFila1">Formada em Administração de Empresas. Atualmente curso Análise e Desenvolvimento de Programas. Sempre enxerguei a tecnologia como uma ferramenta poderosa para otimizar o trabalho e facilitar a vida das pessoas.</Typography>
 
@@ -141,7 +141,7 @@ function Sobre() {
                                 <GitHubIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                             <a href="https://api.whatsapp.com/send?phone=5511999059579&text=Ol%C3%A1!%20Tudo%20bem%3F%20Vi%20seu%20portf%C3%B3lio" target="_blank">
-                                <WhatsappIcon style={{ fontSize: 40, margin: 5 }} />
+                                <WhatsAppIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                         </Box>
                     </Box>
@@ -154,7 +154,7 @@ function Sobre() {
                 <Grid item xs={4}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="src\imagens\joao_foto_.png" className="fotosDev" />
-                        <Typography variant="body3" gutterBottom component="h3" align="center" >João Vitor Moreira</Typography>
+                        <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center" >João Vitor Moreira</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard'>Técnico em Arquivologia, atualmente estudo Análise e Desenvolvimento de Sistemas. Apaixonado por Programação, busco melhorar minhas habilidades e conhecimentos, focando em soluções que causem um impacto positivo.</Typography>
 
@@ -166,7 +166,7 @@ function Sobre() {
                                 <GitHubIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                             <a href="https://wa.link/hdolyc" target="_blank">
-                                <WhatsappIcon style={{ fontSize: 40, margin: 5 }} />
+                                <WhatsAppIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                         </Box>
                     </Box>
@@ -175,7 +175,7 @@ function Sobre() {
                 <Grid item xs={4}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="src\imagens\nicolle.png" className="fotosDev"/>
-                        <Typography variant="body3" gutterBottom component="h3" align="center">Nicolle Sanches</Typography>
+                        <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center">Nicolle Sanches</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard'>Formada no Bootcamp de Desenvolvedora Java. Sou apaixonada por desafios e Programação. A minha determinação é evidenciada pela resiliência. Tenho como objetivo encontrar soluções e simplificar a vida das pessoas com a Tecnologia.</Typography>
 
@@ -187,7 +187,7 @@ function Sobre() {
                                 <GitHubIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                             <a href="https://wa.me/5511989452355" target="_blank">
-                                <WhatsappIcon style={{ fontSize: 40, margin: 5 }} />
+                                <WhatsAppIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                         </Box>
                     </Box>
@@ -196,7 +196,7 @@ function Sobre() {
                 <Grid item xs={4}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="src\imagens\yngrid.png" className="fotosDev"/>
-                        <Typography variant="body3" gutterBottom component="h3" align="center">Yngrid Padilha</Typography>
+                        <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center">Yngrid Padilha</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard'>Enquanto estudante de Análise e Desenvolvimento de Sistemas, vejo a possibilidade de mudanças com a ajuda da tecnologia, criatividade, persistência e trabalho em equipe. Me mover pelo novo é a minha paixão.</Typography>
 
@@ -208,7 +208,7 @@ function Sobre() {
                                 <GitHubIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                             <a href="https://wa.me/5511985745497" target="_blank">
-                                <WhatsappIcon style={{ fontSize: 40, margin: 5 }} />
+                                <WhatsAppIcon style={{ fontSize: 40, margin: 5 }} />
                             </a>
                         </Box>
                     </Box>

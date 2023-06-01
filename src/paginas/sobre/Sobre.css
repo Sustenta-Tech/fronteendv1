@@ -6,6 +6,11 @@
      color: #8cb570;
  }
 
+ .nomeDev {
+    font-weight: 700 !important;
+
+ }
+
  .cardmissao {
      background-color: #8cb570;
      color: #fff;

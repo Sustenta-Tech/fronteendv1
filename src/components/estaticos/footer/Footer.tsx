@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography } from '@material-ui/core'
-import WhatsappIcon from '@material-ui/icons/Whatsapp';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+// import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import CreditCardIcon from '@material-ui/icons/CreditCard'
@@ -23,7 +24,7 @@ function Footer() {
                                 <GitHubIcon style={{ fontSize: 35, color: "black" }} />
                             </a>
                             <a href="/" target="_blank">
-                                <WhatsappIcon style={{ fontSize: 35, color: "black" }} />
+                                <WhatsAppIcon style={{ fontSize: 35, color: "black" }} />
                             </a>
                         </Box>
                     </Box>
@@ -56,7 +57,7 @@ function Footer() {
 
                         <Box justifyContent="center">
                             <Typography variant="h6" align="center">Patrocinador</Typography>
-                            <img src='src\imagens\Sumup.png' alt="logo" />
+                            <img src='src\imagens\Sumup.png' alt="logo" />            
                         </Box>
 
                         <Box justifyContent="center">
