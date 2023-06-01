@@ -3,21 +3,19 @@ import { Typography, Button, Card, CardActions, CardContent } from "@material-ui
 import { Box } from '@mui/material';
 import './DeletarProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import { toast } from 'react-toastify';
 import Produto from '../../../models/Produto';
-// import { useSelector } from 'react-redux';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function DeletarProduto() {
 
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
-    // const token = useSelector<TokenState, TokenState["tokens"]>(
-    //     (state) => state.tokens
-    // );
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     const [produto, setProdutos] = useState<Produto>()
 
     useEffect(() => {
@@ -57,18 +55,17 @@ function DeletarProduto() {
                 'Authorization': token
             }
         });
-        alert('Produto deletado com sucesso');
         navigate('/admin')
-        // toast.success('Produto deletada com sucesso', {
-        //     position: "top-right",
-        //     autoClose: 3000,
-        //     hideProgressBar: false,
-        //     closeOnClick: true,
-        //     pauseOnHover: false,
-        //     draggable: false,
-        //     theme: "colored",
-        //     progress: undefined,
-        // });
+        toast.success('Produto deletada com sucesso', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
     }
 
     function nao() {

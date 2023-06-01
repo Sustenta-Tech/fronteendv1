@@ -1,5 +1,5 @@
 .navbar {
-   background-color: #061b14 !important; 
+    background-color: #061b14 !important; 
     color: rgb(18, 46, 11) !important;
 
     /* background-color: var(--cor-verde-escuro) !important; */
@@ -8,6 +8,12 @@
 .cursor {
     color: white;
 }
+
+.cursor:hover {
+    color: var(--cor-verde);
+    text-shadow: 1px 1px 6px var(--cor-verde);
+}
+
 .border {
     border: 1px solid red;
 }

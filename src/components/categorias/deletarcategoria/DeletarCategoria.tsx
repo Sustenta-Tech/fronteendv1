@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react'
 import { Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
 import { Box } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
+// import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import { toast } from 'react-toastify';
-import Produto from '../../../models/Produto';
+// import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
-// import { useSelector } from 'react-redux';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function DeletarCategoria() {
 
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
+    // const [token, setToken] = useLocalStorage('token');
     const [categoria, setCategoria] = useState<Categoria>()
-    // const token = useSelector<TokenState, TokenState["tokens"]>(
-    //     (state) => state.tokens
-    // );
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == "") {
@@ -52,23 +52,22 @@ function DeletarCategoria() {
     }
 
     function sim() {
+         navigate('/admin')
         deleteId(`/categorias/${id}`, {
             headers: {
                 'Authorization': token
             }
         });
-        alert('Categoria deletada com sucesso');
-        navigate('/admin')
-        // toast.success('Produto deletada com sucesso', {
-        //     position: "top-right",
-        //     autoClose: 3000,
-        //     hideProgressBar: false,
-        //     closeOnClick: true,
-        //     pauseOnHover: false,
-        //     draggable: false,
-        //     theme: "colored",
-        //     progress: undefined,
-        // });
+        toast.success('Produto deletada com sucesso', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
     }
 
     function nao() {

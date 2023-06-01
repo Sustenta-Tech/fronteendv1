@@ -3,35 +3,32 @@ import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem,
 import './CadastroProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
-import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
-// import { toast } from 'react-toastify';
-// import { useSelector } from 'react-redux';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function CadastroProduto() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
-    const [token, setToken] = useLocalStorage('token');
-    // const token = useSelector<TokenState, TokenState["tokens"]>(
-    //     (state) => state.tokens
-    // );
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
-            // toast.error('Você precisa estar logado', {
-            //     position: "top-right",
-            //     autoClose: 3500,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: false,
-            //     draggable: false,
-            //     theme: "colored",
-            //     progress: undefined,
-            // });
+            toast.error('Você precisa estar logado', {
+                position: "top-right",
+                autoClose: 3500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
 
             navigate("/login")
         }
@@ -102,34 +99,34 @@ function CadastroProduto() {
                     'Authorization': token
                 }
             })
-            alert('Produto atualizado com sucesso');
-            // toast.success('Produto atualizado com sucesso', {
-            //     position: "top-right",
-            //     autoClose: 3500,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: false,
-            //     draggable: false,
-            //     theme: "colored",
-            //     progress: undefined,
-            // });
+
+            toast.success('Produto atualizado com sucesso', {
+                position: "top-right",
+                autoClose: 3500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         } else {
             post(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            // toast.success('Produto cadastrado com sucesso', {
-            //     position: "top-right",
-            //     autoClose: 3500,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: false,
-            //     draggable: false,
-            //     theme: "colored",
-            //     progress: undefined,
-            // });
-            alert('Produto cadastrado com sucesso');
+             toast.success('Produto cadastrado com sucesso', {
+                 position: "top-right",
+                 autoClose: 3500,
+                 hideProgressBar: false,
+                 closeOnClick: true,
+                 pauseOnHover: false,
+                 draggable: false,
+                 theme: "colored",
+                 progress: undefined,
+             });
+            
         }
         back()
 
@@ -140,10 +137,11 @@ function CadastroProduto() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
+        <Container maxWidth="sm" className="topo" >
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Cadastro de produtos</Typography>
-
+            
+                <Typography variant="h3" color="textSecondary" component="h1" align="left" >Cadastro de produtos</Typography>
+                    
                 <TextField
                     value={produto.foto}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}

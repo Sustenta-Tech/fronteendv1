@@ -5,7 +5,6 @@ import './Home.css'
 import Carrossel from "../../components/carrossel/Carrossel";
 import CarrosselInfo from "../../components/carrosselInfo/CarrosselInfo";
 import ListaProdutos from "../../components/produtos/listaproduto/ListaProdutos";
-// import ListaCategoria from "../../components/categorias/listacategoria/ListaCategoria";
 
 function Home() {
     return (
@@ -13,7 +12,6 @@ function Home() {
             <Grid container style={{ marginTop: "8px" }}>
                 <Grid item xs={12}>
                     <Carrossel />
-                    {/* <ListaCategoria /> */}
                     <ListaProdutos />
                 </Grid>
             </Grid>
