@@ -9,9 +9,11 @@ import SearchIcon from '@material-ui/icons/Search';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
 
+
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
   let navigate = useNavigate();
+
 
   async function getProdutos() {
     await buscaProduto('/produtos', setProdutos);
