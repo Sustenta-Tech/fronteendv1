@@ -2,69 +2,71 @@
 @import url(https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap);
 
 
-.corPrimaria{
-    background-color: "#8cb570";
+.corPrimaria {
+  background-color: "#8cb570";
 }
 
-.contato{
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    padding: 40px;
+.contato {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  padding: 40px;
 }
 
-.teste{
+.teste {
   border-radius: 16px;
   margin-top: 300px;
-  
+
 }
 
-.formulario{
-    width: 80%;
+.gridContato {
+  padding: 40px;
 }
 
-
-
-#sobre{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-color: #DECDF5;
-    border-radius: 16px;
-    gap: 20px;
-}
-
-.textoPrimario{
-    
-    --fonte-principal: 'Open Sans', sans-serif !important;
-}
-
-.textoSecundario{
-    --fonte-segundaria: 'Tenor Sans', sans-serif !important;
+.formulario {
+  width: 80%;
 }
 
 
-button{
-    font-family: 'lato' Roboto;
-    background-color: var(--background-nav);
-    font-weight: 800;
-    color: white;
+
+#sobre {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #DECDF5;
+  border-radius: 16px;
+  gap: 20px;
+}
+
+.textoPrimario {
+
+  --fonte-principal: 'Open Sans', sans-serif !important;
+}
+
+.textoSecundario {
+  --fonte-segundaria: 'Tenor Sans', sans-serif !important;
 }
 
 
-  .telicon img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .emailicon img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .alinhamento{
-    padding-right: 100px;
-    height: 400px;  
-  }
+button {
+  font-family: 'lato' Roboto;
+  background-color: var(--background-nav);
+  font-weight: 800;
+  color: white;
+}
 
 
+.telicon img {
+  width: 30px;
+  height: 30px;
+}
+
+.emailicon img {
+  width: 30px;
+  height: 30px;
+}
+
+.alinhamento {
+  padding-right: 100px;
+  height: 400px;
+}
