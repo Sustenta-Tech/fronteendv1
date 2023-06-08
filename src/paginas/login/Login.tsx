@@ -71,11 +71,10 @@ function Login() {
     }
 
     return (
-        <Grid container direction='row' className='grid'>
+        <Grid container direction='row' className='grid' >
             <Grid xs={9} md={6} container  justifyContent='flex-end'>
                 <Box className='cardInfo'>
                     <form onSubmit={onSubmit}>
-
                         <Box textAlign='center'>
                             {/* <img src='src\imagens\logo+nome.png' /> */}
                             <Typography variant='h5' gutterBottom color='primary' component='h3' align='center' className='tituloLogin'>

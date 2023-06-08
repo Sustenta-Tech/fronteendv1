@@ -2,15 +2,15 @@
 @import url(https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap);
 
 :root {
-    --cor-verde-claro: #d6ffd3;
+    --fonte-principal: 'Open Sans', sans-serif;
+    /* --cor-verde-claro: #d6ffd3;
     --cor-verde: #8cb570;
     --cor-verde-escuro: #061b14;
 
     --cor-preta: #000;
     --cor-branca: #fff;
 
-    --fonte-principal: 'Open Sans', sans-serif;
-    --fonte-segundaria: 'Tenor Sans', sans-serif;
+    --fonte-segundaria: 'Tenor Sans', sans-serif; */
 
 }
 
@@ -25,7 +25,6 @@
 a {
     color: inherit;
     text-decoration: none;
-    /* color: #0070f3; */
 }
 
 ul {
@@ -33,7 +32,7 @@ ul {
 }
 
 body {
-    background-color: #EBEBEB;
+    /* background-color: #EBEBEB; */
 }
 
 /* Responsividade */
@@ -45,7 +44,7 @@ body {
 }
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
     .card,
     .footer {
@@ -59,4 +58,4 @@ body {
     .logo img {
         filter: invert(1);
     }
-}
+} */

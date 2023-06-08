@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./Contato.css"
 import { Button, Grid, Snackbar, TextField, Typography } from "@material-ui/core";
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 
 function Contato() {
+
+    const theme =  useTheme();
+    
     const [enviado, setEnviado] = useState(false);
 
     const handleEnviar = () => {
@@ -16,7 +19,7 @@ function Contato() {
 
     return (
         <>
-            <Grid container direction='row' justifyContent='center' alignItems='center' style={{ backgroundColor:"#8cb570" }} className="gridContato">
+            <Grid container direction='row' justifyContent='center' alignItems='center' style={{ backgroundColor: theme.palette.background.paper  }} className="gridContato">
                 <Grid item xs={12} sm={6} className="alinhamento">
                     <Box textAlign='center'>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' className='textoPrimario'>Contato</Typography>
@@ -32,35 +35,39 @@ function Contato() {
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={4} alignItems='center' style={{ backgroundColor:"#fff" }} className="teste">
+                <Grid item xs={12} sm={4} alignItems='center' style={{ backgroundColor: theme.palette.background.default }} className="teste">
                     <main className="contato">
                         <form className="formulario">
                             <TextField
-                                className="texto_form"
+                                className="textFieldCont"
                                 id="nome"
                                 type="text"
                                 label="Nome"
+                                margin="dense"
                                 placeholder="Insira o seu nome completo..."
                                 fullWidth
                             />
                             <TextField
-                                className="texto_form"
+                                className="textFieldCont"
                                 id="email"
                                 type="text"
                                 label="Email"
+                                margin="dense"
                                 placeholder="Insira o seu email completo..."
                                 fullWidth
                             />
                             <TextField
-                                className="texto_form"
+                                className="textFieldCont"
                                 id="assunto"
                                 type="text"
                                 label="Assunto"
+                                margin="dense"
                                 placeholder="Insira o assunto da mensagem..."
                                 fullWidth
                             />
                             <Box my={2}>
                                 <TextField
+                                    className="textFieldCont"
                                     id="mensagem"
                                     label="Mensagem"
                                     multiline

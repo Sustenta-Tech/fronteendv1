@@ -137,7 +137,7 @@ function CadastroProduto() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo"  >
+        <Container maxWidth="sm" className="containerFormProd"  >
             <form onSubmit={onSubmit} className="formCadastroProd">
             
                 <Typography variant="h3" component="h1" align="center" className='tituloCadastroProd'>Cadastro de produtos</Typography>

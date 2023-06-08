@@ -93,7 +93,9 @@ function CadastroUsuario() {
     }
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center' className='gridCadastroUser'>
-            <Grid item md={6} xs={12} className='imagem2' ></Grid>
+            <Grid item md={6} xs={12} className='gridCadastroUser' >
+                <Box className='imagem2'></Box>
+            </Grid>
             <Grid item md={6} xs={12} alignItems='center'>
                 <Box paddingX={6}>
                     <form onSubmit={onSubmit} className='formCadastro'>

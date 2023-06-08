@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { AppBar, Button, Tab, Tabs } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { TabContext, TabPanel } from '@material-ui/lab';
 import './Admin.css';
 import { Link, useNavigate } from 'react-router-dom';
@@ -11,6 +11,9 @@ import { toast } from 'react-toastify';
 import { TokenState } from '../../store/tokens/tokensReducer';
 
 function Admin() {
+
+    const theme =  useTheme();
+    
 
     //Recebendo o token: 
     let navigate = useNavigate();
@@ -76,7 +79,7 @@ function Admin() {
                     </Tabs>
                 </AppBar>
 
-                <TabPanel value="1" className='bodyTab' >
+                <TabPanel value="1" className='bodyTab' style={{ backgroundColor: theme.palette.background.paper }}>
                     <Box display="flex" flexWrap="wrap" justifyContent="center" >
                         <AdminCardProduto />
                     </Box>
@@ -84,7 +87,7 @@ function Admin() {
 
 
 
-                <TabPanel value="2" className='bodyTab'>
+                <TabPanel value="2" className='bodyTab' style={{ backgroundColor: theme.palette.background.paper }}>
                     <Box display="flex" flexWrap="wrap" justifyContent="center">
                         <AdminCardCategoria />
                     </Box>

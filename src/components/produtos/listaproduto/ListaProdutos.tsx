@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Card, CardActions, CardContent, Button, Typography, TextField, Grid } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import './ListaProdutos.css';
 import { buscaProduto } from '../../../services/Service';
 import Produto from '../../../models/Produto';
@@ -11,6 +11,9 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 
 
 function ListaProdutos() {
+  
+  const theme =  useTheme();
+
   const [produtos, setProdutos] = useState<Produto[]>([]);
   let navigate = useNavigate();
 
@@ -48,7 +51,7 @@ function ListaProdutos() {
             </Box>
             </Box>
             </Grid>
-    <Grid container xs={12} direction="row" justifyContent="center" alignItems="flex-start" className='fundo' >
+    <Grid container xs={12} direction="row" justifyContent="center" alignItems="flex-start" className='fundo' style={{ backgroundColor: theme.palette.background.paper }}>
     <Box display="flex" flexDirection="column" alignItems="center" pt={1} pb={1} >
       <Box display="flex" alignItems="center" mb={1} className='searchContainer'>
         <TextField
@@ -63,10 +66,10 @@ function ListaProdutos() {
         </Box>
       </Box>
          </Grid>
-         <Grid item xs={12} justifyContent="center"className='fundo' >
+         <Grid item xs={12} justifyContent="center"className='fundo' style={{ backgroundColor: theme.palette.background.paper }}>
       <Box display="flex" flexWrap="wrap" justifyContent="center" className='boxProduto'>
         {produtos.map((produto) => (
-          <Card key={produto.id} variant="outlined" className="cardPostagem">
+          <Card key={produto.id} variant="outlined" className="cardPostagem" style={{ backgroundColor: theme.palette.background.default, color: theme.palette.secondary.contrastText }}>
             <CardContent>
               <Typography variant="h5" component="h2">
                 <img src={`${produto.foto}`} alt="" className="imagempost" referrerPolicy="no-referrer" />

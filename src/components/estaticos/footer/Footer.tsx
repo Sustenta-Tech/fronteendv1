@@ -7,12 +7,14 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import CreditCardIcon from '@material-ui/icons/CreditCard'
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone'
 import './Footer.css'
-import { Box } from '@mui/material'
+import { Box, useTheme } from '@mui/material'
 
 function Footer() {
+    const theme =  useTheme();
+    
     return (
         <>
-            <Grid container md={12} className="gridFooter">
+            <Grid container md={12} className="gridFooter" style={{ backgroundColor: theme.palette.background.default }}>
                 <Grid item md={2} sm={6} xs={12}>
                     <Box display="flex" flexDirection="column" className="marginBottonFooter">
                         <Typography variant="h6" align="center">Redes Sociais</Typography>
