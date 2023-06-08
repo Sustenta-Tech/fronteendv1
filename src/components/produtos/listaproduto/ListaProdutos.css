@@ -39,4 +39,16 @@
     width: 100%;
     justify-self: flex-start !important;
 }
- 
+@media (max-width: 768px) {
+    .searchField {
+        width: 250px !important;
+    }
+    .fretemenor{
+        width: 500px !important;
+        flex-direction: row!important;
+        align-items: center!important;
+        justify-content: center !important;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+  }

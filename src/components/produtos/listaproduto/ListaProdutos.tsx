@@ -25,28 +25,36 @@ function ListaProdutos() {
 
   return (
     <>
-    <Grid container xs={12} direction="row" justifyContent="center" alignItems="flex-start"  >
-        <Box display="flex" flexDirection="column" alignItems="center" pt={1} pb={1}>
-          <Box display="flex" alignItems="center" mb={1} pt={1} pb={0.5}>
+    <Grid container xs={12}  className='fretemenor' style={{ marginTop: '1rem', marginBottom:'1rem' }} >
+     <Grid container xs={6}  direction="row" justifyContent="center" alignItems="center" className='fretemenor'>
+            <Box>
             <Typography variant="h6" component="p" style={{ marginRight: '0.5rem' }}>
             <b>Frete grátis</b>
             </Typography>
+            </Box>
+            <Box>
             <Typography variant="body1" component="p" style={{marginRight: '0.5rem' }}>
             para compras acima de
             </Typography>
-            <Typography variant="h6" component="p" style={{marginRight: '25rem' }}>
+            </Box>
+            <Box>
+            <Typography variant="h6" component="p" style={{marginRight: '0.5rem' }}>
             <b>R$99,99</b>
             </Typography>
+            </Box>
+            </Grid>
+            <Grid container xs={6}  direction="row" justifyContent="center" alignItems="center">
+           <Box>
             <Typography variant="body1" component="p" style={{marginRight: '0.5rem'}}>
               Parcele em até
             </Typography>
+            </Box>
             <Box pb={0.3}>
             <Typography variant="h6" component="p" style={{marginRight: '0.5rem'}}  >
             <b>10x sem juros</b>
             </Typography>
             </Box>
-            </Box>
-            </Box>
+            </Grid>
             </Grid>
     <Grid container xs={12} direction="row" justifyContent="center" alignItems="flex-start" className='fundo' >
     <Box display="flex" flexDirection="column" alignItems="center" pt={1} pb={1} >
