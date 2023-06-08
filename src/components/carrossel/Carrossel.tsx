@@ -9,6 +9,9 @@ import "swiper/css/navigation";
 // Importando seu CSS
 import "./Carrossel.css";
 
+// Importando link para produtos
+import { Link } from "react-router-dom";
+
 // Importanto Componentes do Swiper
 import { Autoplay, Pagination, Navigation } from "swiper";
 
@@ -32,23 +35,32 @@ function Carrossel() {
             >
 
                 <SwiperSlide>
-                    <img src="https://imgur.com/BYqnHSTl.png" alt="Imagem" referrerPolicy="no-referrer" />
+                    <Link to="/produtos">
+                        <img src="https://imgur.com/BYqnHSTl.png" alt="Imagem" referrerPolicy="no-referrer" />
+                    </Link>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="https://imgur.com/5PCBDdf.png" alt="Imagem" referrerPolicy="no-referrer" />
+                    <Link to="/produtos">
+                        <img src="https://imgur.com/5PCBDdf.png" alt="Imagem" referrerPolicy="no-referrer" />
+                    </Link>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="https://imgur.com/a7cu6sj.png" alt="Imagem" referrerPolicy="no-referrer" />
+                    <Link to="/produtos">
+                        <img src="https://imgur.com/a7cu6sj.png" alt="Imagem" referrerPolicy="no-referrer" />
+                    </Link>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <img src="https://imgur.com/eXVk0MR.png" alt="Imagem" referrerPolicy="no-referrer" />
+                    <Link to="/produtos">
+                        <img src="https://imgur.com/eXVk0MR.png" alt="Imagem" referrerPolicy="no-referrer" />
+                    </Link>
                 </SwiperSlide>
 
-            </Swiper>
+            </Swiper >
         </>
+
     )
 }
 
