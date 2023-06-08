@@ -9,3 +9,21 @@
 .textFooter {
   font-size: 0.8rem !important;
 }
+
+@media (max-width: 500px) {
+  .gridFooter {
+      text-align: center;
+      flex-direction: column;
+  }
+
+  .marginBottonFooter {
+    /* border: 1px solid rebeccapurple; */
+    margin-bottom: 15px;
+
+  }
+
+  .patrocinio {
+    /* flex-direction: column; */
+    
+  }
+}
