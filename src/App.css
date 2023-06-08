@@ -9,8 +9,8 @@
     --cor-preta: #000;
     --cor-branca: #fff;
 
-    --fonte-principal: 'Open Sans', sans-serif;  
-    --fonte-segundaria: 'Tenor Sans', sans-serif; 
+    --fonte-principal: 'Open Sans', sans-serif;
+    --fonte-segundaria: 'Tenor Sans', sans-serif;
 
 }
 
@@ -34,4 +34,29 @@ ul {
 
 body {
     background-color: #EBEBEB;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .grid {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+
+    .card,
+    .footer {
+        border-color: #222;
+    }
+
+    .code {
+        background: #111;
+    }
+
+    .logo img {
+        filter: invert(1);
+    }
 }

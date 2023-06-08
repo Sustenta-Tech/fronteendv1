@@ -70,3 +70,10 @@ button {
   padding-right: 100px;
   height: 400px;
 }
+
+@media (max-width: 600px) {
+  .gridContato {
+    padding: 10px;
+  }
+
+}

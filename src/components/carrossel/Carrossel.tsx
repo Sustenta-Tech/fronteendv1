@@ -36,12 +36,6 @@ function Carrossel() {
 
                 <SwiperSlide>
                     <Link to="/produtos">
-                        <img src="https://imgur.com/BYqnHSTl.png" alt="Imagem" referrerPolicy="no-referrer" />
-                    </Link>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Link to="/produtos">
                         <img src="https://imgur.com/5PCBDdf.png" alt="Imagem" referrerPolicy="no-referrer" />
                     </Link>
                 </SwiperSlide>

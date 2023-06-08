@@ -15,7 +15,7 @@ function Navbar() {
                     <Box display="flex" justifyContent="start" className='boxNav' >
 
                         <Box className='cursor'>
-                            <img src='https://imgur.com/kp8jLoG.png' alt="logo" />
+                            <img src='https://imgur.com/kp8jLoG.png' alt="logo" referrerPolicy="no-referrer" />
                         </Box>
 
                         <Link to='/home' className='text-decorator-none'>
