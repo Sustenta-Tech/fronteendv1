@@ -93,11 +93,11 @@ function CadastroUsuario() {
     }
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center' className='gridCadastroUser'>
-            <Grid item xs={6} className='imagem2' ></Grid>
-            <Grid item xs={6} alignItems='center'>
+            <Grid item md={6} xs={12} className='imagem2' ></Grid>
+            <Grid item md={6} xs={12} alignItems='center'>
                 <Box paddingX={6}>
                     <form onSubmit={onSubmit} className='formCadastro'>
-                        <Typography variant='h4' gutterBottom component='h3' align='center' className='tituloCadastro'>Cadastrar</Typography>
+                        <Typography variant='h4' gutterBottom component='h3' align='center' className='tituloCadastro'>Cadastro de usuário</Typography>
                         <TextField className='textField' value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant='outlined' name='nome' margin='dense' fullWidth />
                         <TextField className='textField' value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='email' variant='outlined' name='usuario' margin='dense' fullWidth />
                         <TextField className='textField' value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='dense' type='password' fullWidth />

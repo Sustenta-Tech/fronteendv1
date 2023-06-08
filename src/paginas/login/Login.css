@@ -30,7 +30,7 @@
 
 .cardInfo {
     max-width: 400px;
-    height: 300px;
+    min-height: 300px;
     padding: 10px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -69,9 +69,17 @@
     background-color: var(--cor-verde-escuro) !important; 
 }*/
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
-    .grid {
-        grid-auto-flow: column;
-        }
+    .cardInfo {
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .cardVerde {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        padding-top: 20px;
+
+    }
 }
