@@ -9,6 +9,7 @@ import { toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import './DeletarCategoria.css'
 
 function DeletarCategoria() {
 
@@ -52,7 +53,7 @@ function DeletarCategoria() {
     }
 
     function sim() {
-         navigate('/admin')
+        navigate('/admin')
         deleteId(`/categorias/${id}`, {
             headers: {
                 'Authorization': token
@@ -78,18 +79,18 @@ function DeletarCategoria() {
         <>
             <Box m={2}>
                 <Card variant="outlined" >
-                    <CardContent>
-                        <Box justifyContent="center">
-                            <Typography color="textSecondary" gutterBottom>
-                                Deseja deletar a categoria:
+                    <CardContent className='cardDeletarCateg'>
+                        <Box justifyContent="center" >
+                            <Typography color="textPrimary" gutterBottom>
+                                <b>Deseja realmente deletar a categoria:</b>
                             </Typography>
-                            <Typography color="textSecondary" >
+                            <Typography color="textPrimary" >
                                 {categoria?.tipo}
                             </Typography>
                         </Box>
 
                     </CardContent>
-                    <CardActions>
+                    <CardActions className='cardDeletarCateg'>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
                                 <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">

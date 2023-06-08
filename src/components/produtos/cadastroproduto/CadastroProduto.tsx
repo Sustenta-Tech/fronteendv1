@@ -137,39 +137,45 @@ function CadastroProduto() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo" >
-            <form onSubmit={onSubmit}>
+        <Container maxWidth="sm" className="topo"  >
+            <form onSubmit={onSubmit} className="formCadastroProd">
             
-                <Typography variant="h3" color="textSecondary" component="h1" align="left" >Cadastro de produtos</Typography>
+                <Typography variant="h3" component="h1" align="center" className='tituloCadastroProd'>Cadastro de produtos</Typography>
                     
                 <TextField
+                    className='textFieldProd'
                     value={produto.foto}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="foto" label="foto" name="foto" variant="outlined" margin="normal" fullWidth />
+                    id="foto" label="foto" name="foto" variant="outlined" margin="dense" fullWidth />
 
                 <TextField
+                    className='textFieldProd'
                     value={produto.nome}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="nome" label="Nome do Produto" name="nome" variant="outlined" margin="normal" fullWidth />
+                    id="nome" label="Nome do Produto" name="nome" variant="outlined" margin="dense" fullWidth />
 
                 <TextField
+                    className='textFieldProd'
                     value={produto.descricao}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="descricao" label="Descricao" name="descricao" variant="outlined" margin="normal" fullWidth />
+                    id="descricao" label="Descricao" name="descricao" variant="outlined" margin="dense" fullWidth />
 
                 <TextField
+                className='textFieldProd'
                     value={produto.quantidade}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="quantidade" label="Quantidade em estoque" name="quantidade" variant="outlined" margin="normal" fullWidth />
+                    id="quantidade" label="Quantidade em estoque" name="quantidade" variant="outlined" margin="dense" fullWidth />
 
                 <TextField
+                className='textFieldProd'
                     value={produto.preco}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="preco" label="Preco" name="preco" variant="outlined" margin="normal" fullWidth />
+                    id="preco" label="Preco" name="preco" variant="outlined" margin="dense" fullWidth />
 
                 <FormControl >
-                    <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label" color='secondary'>Categoria </InputLabel>
                     <Select
+            
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
                         onChange={(e) => buscaId(`/categorias/${e.target.value}`, setCategoria, {
@@ -183,8 +189,8 @@ function CadastroProduto() {
                             ))
                         }
                     </Select>
-                    <FormHelperText>Escolha uma categoria para o produto</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <FormHelperText color='secondary' >Escolha uma categoria para o produto</FormHelperText>
+                    <Button type="submit" variant="contained" color="secondary">
                         Finalizar
                     </Button>
                 </FormControl>
@@ -192,4 +198,4 @@ function CadastroProduto() {
         </Container>
     )
 }
-export default CadastroProduto;
+export default CadastroProduto

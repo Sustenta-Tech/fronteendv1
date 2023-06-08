@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import './CadastroCategoria.css'
 
 
 
@@ -113,14 +114,14 @@ function CadastroCategoria() {
 
     return (
         <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Cadastro de categoria</Typography>
+            <form onSubmit={onSubmit} className='formCadastroCateg'>
+                <Typography variant="h3" component="h1" align="center" className='tituloCadastroCateg'>Cadastro de categoria</Typography>
 
-                <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
+                <TextField className='textFieldCateg' value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
 
-                <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+                <TextField className='textFieldCateg' value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
 
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" color="secondary">
                     Finalizar
                 </Button>
             </form>

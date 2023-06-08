@@ -52,17 +52,17 @@ function Footer() {
                     <Box display="flex" justifyContent="space-around" >
                         <Box alignItems="center" justifyContent="center" >
                             <Typography variant="h6" align="center" >Projeto</Typography>
-                            <img src='https://imgur.com/xu73cBI.png' alt="logo" />
+                            <img src='https://imgur.com/xu73cBI.png' alt="logo" referrerPolicy="no-referrer" />
                         </Box>
 
                         <Box justifyContent="center">
                             <Typography variant="h6" align="center">Patrocinador</Typography>
-                            <img src='https://imgur.com/Z6oteMk.png' alt="logo" />            
+                            <img src='https://imgur.com/Z6oteMk.png' alt="logo" referrerPolicy="no-referrer" />            
                         </Box>
 
                         <Box justifyContent="center">
                             <Typography variant="h6" align="center">Apoio</Typography>
-                            <img src='https://imgur.com/MG0lNNy.png' alt="logo" />
+                            <img src='https://imgur.com/MG0lNNy.png' alt="logo" referrerPolicy="no-referrer" />
                         </Box>
                     </Box>
                 </Grid>

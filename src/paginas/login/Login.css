@@ -6,7 +6,7 @@
     font-weight: 500;
 }
 
-.subtituloLogin {   
+.subtituloLogin {
     font-size: 1.5rem !important;
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.627);
@@ -14,7 +14,7 @@
 }
 
 .texto {
-    text-align: center ;
+    text-align: center;
     color: white;
     font-weight: 300;
 }
@@ -23,7 +23,8 @@
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    box-shadow: -10px 0 35px rgba(2, 27, 5, 0.233);
+    background-color: #EBEBEB;
+
 
 }
 
@@ -37,7 +38,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    box-shadow: -10px 0 35px rgba(0, 0, 0, .233);
+
+
 }
 
 .cardVerde {
@@ -49,19 +52,26 @@
     border-bottom-right-radius: 20px;
     background: linear-gradient(45deg, var(--cor-verde-escuro), var(--cor-verde));
     box-sizing: border-box;
-    box-shadow: -10px 0 35px rgba(0,0,0,.233);
+    box-shadow: -10px 0 35px rgba(0, 0, 0, .233);
 }
 
-.button{
+.button {
     background-color: transparent !important;
     color: #fff !important;
 }
 
-.button:hover{
-    font-size: 1,6rem;
+.button:hover {
+    font-size: 1, 6rem;
     text-shadow: 1px 1px 2px var(--cor-verde-escuro);
 }
 
 /* #buttonEntrar { 
     background-color: var(--cor-verde-escuro) !important; 
 }*/
+
+@media (max-width: 500px) {
+
+    .grid {
+        grid-auto-flow: column;
+        }
+}
