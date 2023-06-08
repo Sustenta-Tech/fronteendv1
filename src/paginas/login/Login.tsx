@@ -72,7 +72,7 @@ function Login() {
 
     return (
         <Grid container direction='row' className='grid'>
-            <Grid xs={6}  container  justifyContent='flex-end'>
+            <Grid xs={9} md={6} container  justifyContent='flex-end'>
                 <Box className='cardInfo'>
                     <form onSubmit={onSubmit}>
 
@@ -96,7 +96,7 @@ function Login() {
                 </Box>
             </Grid>
 
-            <Grid xs={6}  container direction='row' justifyContent='flex-start'>
+            <Grid xs={9} md={6} container direction='row' justifyContent='flex-start'>
                 <Box paddingX={5} className='cardVerde'>
                     <Typography variant='h3' gutterBottom component='h3' className='subtituloLogin'>
                         Ainda não tem cadastro?
