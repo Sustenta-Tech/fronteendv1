@@ -16,23 +16,23 @@ function Contato() {
 
     return (
         <>
-            <Grid container direction='row' justifyContent='center' alignItems='center' style={{ backgroundColor:"#8cb570" }}>
+            <Grid container direction='row' justifyContent='center' alignItems='center' style={{ backgroundColor:"#8cb570" }} className="gridContato">
                 <Grid item xs={12} sm={6} className="alinhamento">
                     <Box textAlign='center'>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' className='textoPrimario'>Contato</Typography>
                         <Typography variant='h6' color='textPrimary' align='center' className='textoSecundario'paragraph>Confira nossos canais de contato. Se preferir, preencha o formulário ao lado para nos contatar.</Typography>
                         <Typography variant='h6' color='textPrimary' align='center' className="telicon" paragraph>
-                            <img src="src\imagens\telefone-icon.png" alt="Ícone de telefone" /> (XX)XXXXX-XXXX
+                            <img src="https://imgur.com/5L8QllA.png" alt="Ícone de telefone" /> (11) 2556-7458
                         </Typography>
                         <Typography variant='h6' color='textPrimary' align='center' className="emailicon" paragraph>
-                            <img src="src\imagens\email-icon.png" alt="Ícone de email" /> sustentatechintegrador@gmail.com
+                            <img src="https://imgur.com/4pKmYHP.png" alt="Ícone de email" /> sustentatechintegrador@gmail.com
                         </Typography>
                         <Typography variant='h6' color='textPrimary' align='center' className="emailicon" paragraph>
-                            <img src="src\imagens\localizacao-icon.png" alt="Ícone de localizacao" /> Endereço: Rua X n°00, Bairro Y São Paulo - SP
+                            <img src="https://imgur.com/uYZcIKU.png" alt="Ícone de localizacao" /> Endereço: São Paulo - SP
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={4} alignItems='center' style={{ backgroundColor:"#fff" }}>
+                <Grid item xs={12} sm={4} alignItems='center' style={{ backgroundColor:"#fff" }} className="teste">
                     <main className="contato">
                         <form className="formulario">
                             <TextField

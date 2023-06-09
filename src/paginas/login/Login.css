@@ -1,19 +1,20 @@
 .tituloLogin {
-    font-size: 2rem !important;
-    color: var(--cor-verde-claro) !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.627);
+    /* font-size: 2rem !important; */
+    /* color: var(--cor-verde-claro) !important; */
+    /* text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.627); */
     font-size: 34px;
     font-weight: 500;
 }
 
-.subtitulo {   
+.subtituloLogin {
     font-size: 1.5rem !important;
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.627);
+    text-align: center;
 }
 
 .texto {
-    text-align: center ;
+    text-align: center;
     color: white;
     font-weight: 300;
 }
@@ -22,12 +23,14 @@
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #EBEBEB;
+
+
 }
 
 .cardInfo {
     max-width: 400px;
-    height: 300px;
+    min-height: 300px;
     padding: 10px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -35,6 +38,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: -10px 0 35px rgba(0, 0, 0, .233);
+
+
 }
 
 .cardVerde {
@@ -44,21 +50,36 @@
     padding-top: 60px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    background: linear-gradient(45deg, var(--cor-verde-claro), var(--cor-verde));
+    background: linear-gradient(45deg, var(--cor-verde-escuro), var(--cor-verde));
     box-sizing: border-box;
-    box-shadow: -10px 0 35px rgba(0,0,0,.233);
+    box-shadow: -10px 0 35px rgba(0, 0, 0, .233);
 }
 
-.button{
+.button {
     background-color: transparent !important;
     color: #fff !important;
 }
 
-.button:hover{
-    font-size: 1,6rem;
-    text-shadow: 1px 1px 2px black;
+.button:hover {
+    font-size: 1, 6rem;
+    text-shadow: 1px 1px 2px var(--cor-verde-escuro);
 }
 
-#buttonEntrar {
-    background-color: var(--cor-verde-claro) !important;
+/* #buttonEntrar { 
+    background-color: var(--cor-verde-escuro) !important; 
+}*/
+
+@media (max-width: 600px) {
+
+    .cardInfo {
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .cardVerde {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        padding-top: 20px;
+
+    }
 }

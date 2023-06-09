@@ -1,74 +1,77 @@
- .caixa{
-    /* background-color: white;  */
-} 
+ .caixa {
+     /* background-color: white;  */
+ }
 
-.cardmissao{
-    background-color: #8cb570;
-    color:#fff;
-    font-family: 'Open Sans', sans-serif !important; 
-    min-height: 300px; 
-}
+ .subtituloSobre {
+     color: #8cb570;
+ }
 
-.cardtech{
-    background-color: #061b14;
-    color:#fff !important;
+ .nomeDev {
+    font-weight: 700 !important;
+
+ }
+
+ .cardmissao {
+     background-color: #8cb570;
+     color: #fff;
+     font-family: 'Open Sans', sans-serif !important;
      min-height: 300px;
-    
-}
+     padding-inline: 100px;
+ }
 
-.devscard{
-    color:#fff !important;
-    font-family: 'Open Sans', sans-serif !important;
-}
+ .cardtech {
+     background-color: #061b14;
+     color: #fff !important;
+     min-height: 300px;
+     padding: 20px;
+ }
 
-.devscard2{
-    color:black !important;
-    font-family: 'Open Sans', sans-serif !important;
-}
+ .devscard {
+     border-top: #8cb570 solid 2px;
+     padding-top: 10px;
+     color: #fff !important;
+     /* min-height: 155px;  */
+ }
+
+ #devsFila1 {
+     /* height: 220px;  */
+ }
+
+ .devscard2 {
+     color: black !important;
+     font-family: 'Open Sans', sans-serif !important;
+     padding-inline: 100px;
+ }
 
 
-.titulo{
-   color: black !important;
-   font-family: 'Open Sans', sans-serif !important;
-   min-height: 300px;  
-}
+ .titulo {
+     color: black !important;
+     font-family: 'Open Sans', sans-serif !important;
+     min-height: 300px;
+     padding-inline: 100px;
+ }
 
-.cardicons{
-    color: #8cb570;
-    border-top: #8cb570 solid 2px;
-    margin-top: 15px;
-    padding: 5px;
-}
+ .cardicons {
+     color: #8cb570;
+     border-top: #8cb570 solid 2px;
+     margin-top: 15px;
+     padding: 5px;
+ }
 
 /* Responsividade */
 
-@media(max-width: 1000px){
+@media (max-width: 600px) {
 
-    nav{
-        width: 100vw;
-        flex-direction: column;
-        row-gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.25rem;
+    .devscard2 {
+        padding: 15px;
     }
 
-    .cardmissao{
-        background-color: #8cb570;
-        color:#fff;
-        font-family: 'Open Sans', sans-serif !important; 
-        min-height: 300px; 
+    .cardmissao {
+        padding: 22px;
+        flex-direction:column-reverse;
     }
 
-    .titulo{
-        text-align: center;
-    }
-
-    main{   
-        width: 95vw;
-    }
-
-    #sobre {
-        flex-direction: column-reverse;
+    .titulo {
+        padding: 15px;
     }
 }

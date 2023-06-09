@@ -1,0 +1,11 @@
+.bodyTab {
+    background-color: var(--cor-verde);
+    min-height: 60vh;
+}
+
+
+@media (max-width: 600px) {
+    .imgAdm {
+        width: 100%;
+    }
+}

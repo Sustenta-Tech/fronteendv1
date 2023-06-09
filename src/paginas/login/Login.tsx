@@ -2,15 +2,18 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, Typography, TextField, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
+import { useDispatch } from 'react-redux';
 import { login } from '../../services/Service';
 import './Login.css';
 import UserLogin from '../../models/UserLogin';
+import { addToken } from '../../store/tokens/actions';
+import { toast } from 'react-toastify';
 
 function Login() {
 
     let history = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    const dispatch = useDispatch();
+    const [token, setToken] = useState('');
 
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
@@ -31,7 +34,8 @@ function Login() {
 
     useEffect(() => {
         if (token != '') {
-            history('/home')
+            dispatch(addToken(token))
+            history('/admin')
         }
     }, [token])
 
@@ -40,9 +44,27 @@ function Login() {
         try {
             await login(`/usuarios/logar`, userLogin, setToken)
 
-            alert('Usuário logado com sucesso!')
+            toast.success('Usuário logado com sucesso!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         } catch (error) {
-            alert('Dados do usuário inconsistentes, Erro ao logar!');
+            toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         }
 
         // console.log('userLogin: ' + Object.values(userLogin));
@@ -50,21 +72,23 @@ function Login() {
 
     return (
         <Grid container direction='row' className='grid'>
-            
-            <Grid xs={6} container direction='row' justifyContent='flex-end'>
+            <Grid xs={9} md={6} container  justifyContent='flex-end'>
                 <Box className='cardInfo'>
                     <form onSubmit={onSubmit}>
 
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='tituloLogin'>
-                            Entrar
-                        </Typography>
+                        <Box textAlign='center'>
+                            {/* <img src='src\imagens\logo+nome.png' /> */}
+                            <Typography variant='h5' gutterBottom color='primary' component='h3' align='center' className='tituloLogin'>
+                                Entrar
+                            </Typography>
+                        </Box>
 
                         <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='usuario' label='E-mail' name='usuario' margin='normal' fullWidth />
 
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='Senha' name='senha' margin='normal' type='password' fullWidth />
 
                         <Box marginTop={2} textAlign='center'>
-                            <Button type='submit' variant='contained' id='buttonEntrar' className='button'>
+                            <Button type='submit' variant='contained' color="primary" id='buttonEntrar'>
                                 Acessar
                             </Button>
                         </Box>
@@ -72,9 +96,9 @@ function Login() {
                 </Box>
             </Grid>
 
-            <Grid xs={6} container direction='row' justifyContent='flex-start'>
+            <Grid xs={9} md={6} container direction='row' justifyContent='flex-start'>
                 <Box paddingX={5} className='cardVerde'>
-                    <Typography variant='h3' gutterBottom component='h3' className='subtitulo'>
+                    <Typography variant='h3' gutterBottom component='h3' className='subtituloLogin'>
                         Ainda não tem cadastro?
                     </Typography>
                     <p className="texto">Se cadastre no link abaixo para conseguir efetuar as suas compras e aproveitar ainda mais o nosso site!</p>
@@ -85,6 +109,7 @@ function Login() {
                                 Cadastre-se
                             </Button>
                         </Link>
+                        
                     </Box>
                 </Box>
             </Grid>

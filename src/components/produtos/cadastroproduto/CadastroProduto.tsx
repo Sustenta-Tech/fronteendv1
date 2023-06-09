@@ -3,35 +3,32 @@ import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem,
 import './CadastroProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
-import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
-// import { toast } from 'react-toastify';
-// import { useSelector } from 'react-redux';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function CadastroProduto() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
-    const [token, setToken] = useLocalStorage('token');
-    // const token = useSelector<TokenState, TokenState["tokens"]>(
-    //     (state) => state.tokens
-    // );
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
-            // toast.error('Você precisa estar logado', {
-            //     position: "top-right",
-            //     autoClose: 3500,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: false,
-            //     draggable: false,
-            //     theme: "colored",
-            //     progress: undefined,
-            // });
+            toast.error('Você precisa estar logado', {
+                position: "top-right",
+                autoClose: 3500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
 
             navigate("/login")
         }
@@ -102,34 +99,34 @@ function CadastroProduto() {
                     'Authorization': token
                 }
             })
-            alert('Produto atualizado com sucesso');
-            // toast.success('Produto atualizado com sucesso', {
-            //     position: "top-right",
-            //     autoClose: 3500,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: false,
-            //     draggable: false,
-            //     theme: "colored",
-            //     progress: undefined,
-            // });
+
+            toast.success('Produto atualizado com sucesso', {
+                position: "top-right",
+                autoClose: 3500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
         } else {
             post(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            // toast.success('Produto cadastrado com sucesso', {
-            //     position: "top-right",
-            //     autoClose: 3500,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: false,
-            //     draggable: false,
-            //     theme: "colored",
-            //     progress: undefined,
-            // });
-            alert('Produto cadastrado com sucesso');
+             toast.success('Produto cadastrado com sucesso', {
+                 position: "top-right",
+                 autoClose: 3500,
+                 hideProgressBar: false,
+                 closeOnClick: true,
+                 pauseOnHover: false,
+                 draggable: false,
+                 theme: "colored",
+                 progress: undefined,
+             });
+            
         }
         back()
 
@@ -140,38 +137,45 @@ function CadastroProduto() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Cadastro de produtos</Typography>
-
+        <Container maxWidth="sm" className="topo"  >
+            <form onSubmit={onSubmit} className="formCadastroProd">
+            
+                <Typography variant="h3" component="h1" align="center" className='tituloCadastroProd'>Cadastro de produtos</Typography>
+                    
                 <TextField
+                    className='textFieldProd'
                     value={produto.foto}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="foto" label="foto" name="foto" variant="outlined" margin="normal" fullWidth />
+                    id="foto" label="foto" name="foto" variant="outlined" margin="dense" fullWidth />
 
                 <TextField
+                    className='textFieldProd'
                     value={produto.nome}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="nome" label="Nome do Produto" name="nome" variant="outlined" margin="normal" fullWidth />
+                    id="nome" label="Nome do Produto" name="nome" variant="outlined" margin="dense" fullWidth />
 
                 <TextField
+                    className='textFieldProd'
                     value={produto.descricao}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="descricao" label="Descricao" name="descricao" variant="outlined" margin="normal" fullWidth />
+                    id="descricao" label="Descricao" name="descricao" variant="outlined" margin="dense" fullWidth />
 
                 <TextField
+                className='textFieldProd'
                     value={produto.quantidade}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="quantidade" label="Quantidade em estoque" name="quantidade" variant="outlined" margin="normal" fullWidth />
+                    id="quantidade" label="Quantidade em estoque" name="quantidade" variant="outlined" margin="dense" fullWidth />
 
                 <TextField
+                className='textFieldProd'
                     value={produto.preco}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
-                    id="preco" label="Preco" name="preco" variant="outlined" margin="normal" fullWidth />
+                    id="preco" label="Preco" name="preco" variant="outlined" margin="dense" fullWidth />
 
                 <FormControl >
-                    <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label" color='secondary'>Categoria </InputLabel>
                     <Select
+            
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
                         onChange={(e) => buscaId(`/categorias/${e.target.value}`, setCategoria, {
@@ -185,8 +189,8 @@ function CadastroProduto() {
                             ))
                         }
                     </Select>
-                    <FormHelperText>Escolha uma categoria para o produto</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <FormHelperText color='secondary' >Escolha uma categoria para o produto</FormHelperText>
+                    <Button type="submit" variant="contained" color="secondary">
                         Finalizar
                     </Button>
                 </FormControl>
@@ -194,4 +198,4 @@ function CadastroProduto() {
         </Container>
     )
 }
-export default CadastroProduto;
+export default CadastroProduto

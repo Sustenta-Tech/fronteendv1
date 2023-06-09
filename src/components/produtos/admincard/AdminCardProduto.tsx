@@ -2,39 +2,27 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
-import { busca, buscaProduto } from '../../../services/Service';
-// import useLocalStorage from 'react-use-localstorage';
+import { busca } from '../../../services/Service';
 import Produto from '../../../models/Produto';
-// import { useSelector } from 'react-redux';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
-import useLocalStorage from 'react-use-localstorage';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import './AdminCardProduto.css'
+import { toast } from 'react-toastify';
 
 function AdminCardProduto() {
 
     const [produtos, setProdutos] = useState<Produto[]>([])
     let navigate = useNavigate();
-    // const [token, setToken] = useLocalStorage('token');
-    // const token = useSelector<TokenState, TokenState["tokens"]>(
-    //     (state) => state.tokens
-    // );
-
-    // useEffect(() => {
-    //     if (token == '') {
-    //         alert("Você precisa estar logado")
-    //         navigate("/login")
-    //     }
-    // }, [token])
-
-    // async function getProdutos() {
-    //     await busca("/produtos", setProdutos, {
-    //         headers: {
-    //             'Authorization': token
-    //         }
-    //     })
-    // }
-
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+    
     async function getProdutos() {
-        await buscaProduto("/produtos", setProdutos);
+        await busca("/produtos", setProdutos, {
+            headers: {
+                'Authorization': token
+            }
+        })
     }
 
     useEffect(() => {
@@ -45,18 +33,9 @@ function AdminCardProduto() {
 
     return (
         <>
-            {/* <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-                <Grid alignItems="center" item xs={12}>
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
-                            <ModalPostagem />
-                        </Box>
-                    </Box>
-                </Grid>
-            </Grid> */}
             {
                 produtos.map(produto => (
-                    <Box m={2} >
+                    <Box m={2} className='AdminCardProduto'>
                         <Card variant="outlined" className='cardPostagem'>
                             <CardContent >
                                 <Typography variant="h5" component="h2">

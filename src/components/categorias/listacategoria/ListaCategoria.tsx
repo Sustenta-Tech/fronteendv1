@@ -4,24 +4,23 @@ import { Card, CardContent, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './ListaCategoria.css';
 import { busca } from '../../../services/Service';
-// import { useSelector } from 'react-redux';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
-import useLocalStorage from 'react-use-localstorage';
+// import useLocalStorage from 'react-use-localstorage';
 
 function ListaCategoria() {
     const [categorias, setCategorias] = useState<Categoria[]>([])
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    // const [token, setToken] = useLocalStorage('token');
 
-    // const token = useSelector<TokenState, TokenState["tokens"]>(
-    //     (state) => state.tokens
-    // );
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == '') {
-            // alert("Você precisa estar logado")
             toast.error('Você precisa estar logado', {
                 position: "top-right",
                 autoClose: 3500,
@@ -52,13 +51,6 @@ function ListaCategoria() {
 
     return (
         <>
-            {/* <Box m={2} justifyItems='center'>
-                <Link to="/formularioTema">
-                    <Button variant="contained" className="marginLeft" size='small' color="primary">
-                        Cadastrar um novo tema
-                    </Button>
-                </Link>
-            </Box> */}
             {
                 categorias.map(categoria => (
                     <Box m={2} >

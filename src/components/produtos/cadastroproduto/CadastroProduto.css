@@ -1,0 +1,24 @@
+.formCadastroProd {
+    background: linear-gradient(10deg,  #254130,  var(--cor-verde));
+    ;;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+}
+
+.tituloCadastroProd{
+    font-weight: bold !important;
+    font-size: 1.5rem !important ;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.627);
+    text-align: center;
+
+}
+
+.textFieldProd {
+    background-color: #d5e6d7;
+    border-radius: 5px;
+}
+

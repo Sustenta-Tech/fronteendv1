@@ -9,13 +9,13 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 function Navbar() {
     return (
         <>
-            <AppBar position='static' className='navbar' >
+            <AppBar position='static' className='navbar'>
                 <Toolbar variant='dense' className='separar'>
 
                     <Box display="flex" justifyContent="start" className='boxNav' >
 
                         <Box className='cursor'>
-                            <img src='src\imagens\logo+nome.png' alt="logo" />
+                            <img src='https://imgur.com/kp8jLoG.png' alt="logo" referrerPolicy="no-referrer" />
                         </Box>
 
                         <Link to='/home' className='text-decorator-none'>

@@ -2,35 +2,19 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
-import useLocalStorage from 'react-use-localstorage';
-// import { useSelector } from 'react-redux';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 import Categoria from '../../../models/Categoria';
 import { busca } from '../../../services/Service';
+import { toast } from 'react-toastify';
 
 function AdminCardCategoria() {
 
     const [categorias, setCategorias] = useState<Categoria[]>([])
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
-    // const token = useSelector<TokenState, TokenState["tokens"]>(
-    //     (state) => state.tokens
-    // );
-
-    // useEffect(() => {
-    //     if (token == '') {
-    //         alert("Você precisa estar logado")
-    //         navigate("/login")
-    //     }
-    // }, [token])
-
-    // async function getcategorias() {
-    //     await busca("/categorias", setCategorias, {
-    //         headers: {
-    //             'Authorization': token
-    //         }
-    //     })
-    // }
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     async function getCategoria() {
         await busca("/categorias", setCategorias, {
@@ -48,15 +32,6 @@ function AdminCardCategoria() {
 
     return (
         <>
-            {/* <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-                <Grid alignItems="center" item xs={12}>
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
-                            <ModalPostagem />
-                        </Box>
-                    </Box>
-                </Grid>
-            </Grid> */}
             {
                 categorias.map(categoria => (
                     <Box m={2} >

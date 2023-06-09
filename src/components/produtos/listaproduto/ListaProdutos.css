@@ -1,7 +1,54 @@
-.imagempost{
-    max-height: 200px;
+.imagempost {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .cardPostagem {
+    margin: 1rem;
     width: 400px;
+    background-color:#EBEBEB !important;
+
 }
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 700px !important;
+}
+
+.searchField {
+    width: 500px !important;
+    margin-right: 1rem;
+    width: 100% !important;
+    background-color: white !important;
+}
+.text-decorator-none {
+    text-decoration: none
+ }
+
+ .marginLeft {  
+    margin-left: 0.5rem;
+ }
+ .fundo {
+    background-color:#8cb570 !important;
+ }
+ .boxProduto {
+    width: 100%;
+    justify-self: flex-start !important;
+}
+@media (max-width: 768px) {
+    .searchField {
+        width: 250px !important;
+    }
+    .fretemenor{
+        width: 500px !important;
+        flex-direction: row!important;
+        align-items: center!important;
+        justify-content: center !important;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+  }

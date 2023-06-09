@@ -3,21 +3,19 @@ import { Typography, Button, Card, CardActions, CardContent } from "@material-ui
 import { Box } from '@mui/material';
 import './DeletarProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import { toast } from 'react-toastify';
 import Produto from '../../../models/Produto';
-// import { useSelector } from 'react-redux';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function DeletarProduto() {
 
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
-    // const token = useSelector<TokenState, TokenState["tokens"]>(
-    //     (state) => state.tokens
-    // );
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     const [produto, setProdutos] = useState<Produto>()
 
     useEffect(() => {
@@ -57,18 +55,17 @@ function DeletarProduto() {
                 'Authorization': token
             }
         });
-        alert('Produto deletado com sucesso');
         navigate('/admin')
-        // toast.success('Produto deletada com sucesso', {
-        //     position: "top-right",
-        //     autoClose: 3000,
-        //     hideProgressBar: false,
-        //     closeOnClick: true,
-        //     pauseOnHover: false,
-        //     draggable: false,
-        //     theme: "colored",
-        //     progress: undefined,
-        // });
+        toast.success('Produto deletada com sucesso', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
     }
 
     function nao() {
@@ -77,20 +74,20 @@ function DeletarProduto() {
 
     return (
         <>
-            <Box m={2}>
+            <Box m={2} >
                 <Card variant="outlined" >
-                    <CardContent>
+                    <CardContent className='cardDeletarProd'>
                         <Box justifyContent="center">
-                            <Typography color="textSecondary" gutterBottom>
-                                Deseja deletar o produto:
+                            <Typography color="textPrimary" gutterBottom>
+                               <b>Deseja realmente deletar o produto abaixo?</b>
                             </Typography>
-                            <Typography color="textSecondary" >
+                            <Typography color="textPrimary" >
                                 {produto?.nome}
                             </Typography>
                         </Box>
 
                     </CardContent>
-                    <CardActions>
+                    <CardActions className='cardDeletarProd'>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
                                 <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">

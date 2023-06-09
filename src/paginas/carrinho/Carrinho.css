@@ -1,28 +1,114 @@
-.carrinho {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 4px;
-  }
-  
-  .carrinho h2 {
-    margin-bottom: 10px;
-  }
-  
-  .carrinho ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .carrinho li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-  }
-  
-  .carrinho .total {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-weight: bold;
-  }
+.bodycar {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #8cb570;
+}
+
+header {
+  background-color: #fff;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav span {
+  margin-right: 10px;
+}
+
+
+main {
+  margin: 20px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sectionTotalCar {
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 95vw;
+  height: 100px;
+  margin-inline: auto;
+}
+
+.sectionTotalCar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sectionTotalCar li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTotalCar h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.sectionTotalCar span {
+  font-weight: bold;
+}
+
+.sectionTotalCar button {
+  padding: 5px 10px;
+  background-color:#007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+

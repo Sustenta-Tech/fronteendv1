@@ -1,13 +1,16 @@
 .navbar {
-    /* background-color: #061b14 !important; */
-    color: rgb(202, 32, 32) !important;
-
-    /* background-color: var(--cor-verde-escuro) !important; */
+    background-color: #061b14 !important; 
 }
 
 .cursor {
     color: white;
 }
+
+.cursor:hover {
+    color: var(--cor-verde);
+    text-shadow: 1px 1px 6px var(--cor-verde);
+}
+
 .border {
     border: 1px solid red;
 }
