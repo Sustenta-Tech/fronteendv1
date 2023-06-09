@@ -15,7 +15,7 @@ function Navbar() {
 
     return (
         <>
-            <AppBar position='static' className='navbar' >
+            <AppBar position='static' className='navbar'>
                 <Toolbar variant='dense' className='separar'>
 
                     <Box display="flex" justifyContent="start" className='boxNav' >
