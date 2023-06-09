@@ -1,19 +1,22 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import './Sobre.css'
 
 function Sobre() {
+
+    const theme = useTheme();
+    
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='titulo'>
                 <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={15} >
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" className='devscard2'>Somos Sustenta Tech</Typography>
-                        <Typography variant="body1" gutterBottom color="textPrimary" component="h5" align="center" className='devscard2'>Somos uma organização que tem o compromisso de oferecer alternativas inteligentes para atender às necessidades de nossos clientes e do planeta.
+                    <Box paddingX={15}>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" className='devscard2' style={{ color: theme.palette.secondary.contrastText}}>Somos Sustenta Tech</Typography>
+                        <Typography variant="body1" gutterBottom color="textPrimary" component="h5" align="center" className='devscard2'  style={{ color: theme.palette.secondary.contrastText}}>Somos uma organização que tem o compromisso de oferecer alternativas inteligentes para atender às necessidades de nossos clientes e do planeta.
                             Nos dedicamos a encontrar soluções inovadoras e eficientes, que ajudem a impactar positivamente o mundo e melhorar a vida das pessoas.
                             Os nossos valores são guiados pela ética, qualidade e respeito ao meio ambiente.
                         </Typography>
@@ -26,7 +29,7 @@ function Sobre() {
                     </Box>
                 </Grid>
             </Grid>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className='cardmissao' >
+            <Grid container direction="row" justifyContent="center" alignItems="center" className='cardmissao' style={{ color: theme.palette.secondary.contrastText}}>
                 <Grid item xs={6}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="https://imgur.com/xQNjX0E.png"  referrerPolicy="no-referrer" />
@@ -42,12 +45,12 @@ function Sobre() {
 
             <Grid container direction="row" justifyContent="center" alignItems="center" className='titulo'>
                 <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={15} >
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" className='devscard2'>Sobre o Projeto</Typography>
-                        <Typography variant="body1" gutterBottom color="textPrimary" component="h5" align="center" className='devscard2'>Durante o Bootcamp Desenvolvedor Java Full Stack desenvolvemos este projeto integrador de conclusão do curso. Nosso e-commerce se baseou na Agenda 2030 da ONU, com foco em Sustentabilidade. Para a construção, utitlizamos tecnologias: Java, Spring Boot, Postgree, MySql, React, TypeScript, HTML e CSS. </Typography>
+                    <Box paddingX={15}>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" className='devscard2' style={{ color: theme.palette.secondary.contrastText}} >Sobre o Projeto</Typography>
+                        <Typography variant="body1" gutterBottom color="textPrimary" component="h5" align="center" className='devscard2' style={{ color: theme.palette.secondary.contrastText}} >Durante o Bootcamp Desenvolvedor Java Full Stack desenvolvemos este projeto integrador de conclusão do curso. Nosso e-commerce se baseou na Agenda 2030 da ONU, com foco em Sustentabilidade. Para a construção, utitlizamos tecnologias: Java, Spring Boot, Postgree, MySql, React, TypeScript, HTML e CSS. </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} style={{ color: theme.palette.secondary.contrastText}}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="https://imgur.com/oLoGgZG.png"  referrerPolicy="no-referrer"/>
                     </Box>
@@ -56,10 +59,10 @@ function Sobre() {
 
             {/* GRID DESENVOLVEDOR */}
 
-            <Grid container spacing={2} className='cardtech'>
+            <Grid container spacing={5} className='cardtech'>
                 <Grid item xs={12} direction="row" justifyContent="center" alignItems="center">
-                    <Box paddingX={15} >
-                        <Typography variant="h4" gutterBottom color="secondary" component="h3" align="center" className=''>Conheça a Equipe</Typography>
+                    <Box paddingX={15}>
+                        <Typography variant="h4"component="h3" align="center" className=''>Conheça a Equipe</Typography>
                     </Box>
                 </Grid>
 
