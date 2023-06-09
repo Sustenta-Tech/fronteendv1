@@ -24,8 +24,7 @@ import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCa
 import Carrinho from './paginas/carrinho/Carrinho';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { AppThemeProvider } from './themes/ThemeContext';
-
+import { AppThemeProvider } from './themes/ThemeContext'
 
 function App() {
   // const THEME = createTheme({

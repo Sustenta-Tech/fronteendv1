@@ -5,20 +5,20 @@ export const DarkTheme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: yellow[700],
-            dark: yellow[800],
-            light: yellow[500],
-            contrastText: '#ffffff',
+            light: '#b6f28d',
+            main: '#fff',
+            dark: '#89d953',
+            contrastText: '#000',
         },
         secondary: {
-            main: cyan[500],
-            dark: cyan[400],
-            light: cyan[300],
-            contrastText: '#ffffff',
+            light: '#052e21',
+            main: '#5E773E',
+            dark: '#000000',
+            contrastText: '#fff',
         },
         background: {
             paper: '#5E773E',
-            default: '#131615',
+            default: '#061b14', //#131615
         },
     },
     typography: {

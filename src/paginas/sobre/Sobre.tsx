@@ -22,14 +22,14 @@ function Sobre() {
 
                 <Grid item xs={6}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/oLZqVGa.png" />
+                        <img src="https://imgur.com/oLZqVGa.png"  referrerPolicy="no-referrer"/>
                     </Box>
                 </Grid>
             </Grid>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='cardmissao' >
                 <Grid item xs={6}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/xQNjX0E.png" />
+                        <img src="https://imgur.com/xQNjX0E.png"  referrerPolicy="no-referrer" />
                     </Box>
                 </Grid>
                 <Grid alignItems="center" item xs={6}>
@@ -49,7 +49,7 @@ function Sobre() {
                 </Grid>
                 <Grid item xs={6}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/oLoGgZG.png" />
+                        <img src="https://imgur.com/oLoGgZG.png"  referrerPolicy="no-referrer"/>
                     </Box>
                 </Grid>
             </Grid>
@@ -65,7 +65,7 @@ function Sobre() {
 
                 <Grid item xs={3}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/eI3QbIk.png" className="fotosDev" />
+                        <img src="https://imgur.com/eI3QbIk.png" className="fotosDev"  referrerPolicy="no-referrer"/>
                         <Typography variant="h6" gutterBottom component="h3" align="center" className="nomeDev">Andresa Marçal</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard' id="devsFila1">Com formação em Recursos Humanos, atualmente curso Análise e Desenvolvimento de Sistemas. Sou apaixonada por desafios e na Tecnologia, encontrei a paixão que me impulsiona a aprender e evoluir constantemente.</Typography>
@@ -86,7 +86,7 @@ function Sobre() {
 
                 <Grid item xs={3}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/LJQVlbE.jpeg" className="fotosDev"/>
+                        <img src="https://imgur.com/LJQVlbE.jpeg" className="fotosDev"  referrerPolicy="no-referrer"/>
                         <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center">Andressa Camillo</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard' id="devsFila1">Me formei em Comunicação Social e fiz do Bootcamp de Pessoa Desenvolvedora minha escola. Acredito que a combinação de Programação e Comunicação resultam excelentes projetos quando presentes em uma equipe.</Typography>
@@ -107,7 +107,7 @@ function Sobre() {
 
                 <Grid item xs={3}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/a3ltObd.png" className="fotosDev"/>
+                        <img src="https://imgur.com/a3ltObd.png" className="fotosDev"  referrerPolicy="no-referrer"/>
                         <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center">Daisy Viana</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard' id="devsFila1">Como Desenvolvedora, estou aprimorando minhas habilidades para desenvolver soluções eficazes. Determinada e apaixonada por Programação, meu objetivo é me tornar uma excelente Desenvolvedora.</Typography>
@@ -128,7 +128,7 @@ function Sobre() {
 
                 <Grid item xs={3}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/cJxpZ5T.png" className="fotosDev"/>
+                        <img src="https://imgur.com/cJxpZ5T.png" className="fotosDev"  referrerPolicy="no-referrer"/>
                         <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center" >Giselle Souza</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard' id="devsFila1">Formada em Administração de Empresas. Atualmente curso Análise e Desenvolvimento de Programas. Sempre enxerguei a tecnologia como uma ferramenta poderosa para otimizar o trabalho e facilitar a vida das pessoas.</Typography>
@@ -153,7 +153,7 @@ function Sobre() {
 
                 <Grid item xs={4}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/1OHMGcY.png" className="fotosDev" />
+                        <img src="https://imgur.com/1OHMGcY.png" className="fotosDev"  referrerPolicy="no-referrer" />
                         <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center" >João Vitor Moreira</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard'>Técnico em Arquivologia, atualmente estudo Análise e Desenvolvimento de Sistemas. Apaixonado por Programação, busco melhorar minhas habilidades e conhecimentos, focando em soluções que causem um impacto positivo.</Typography>
@@ -174,7 +174,7 @@ function Sobre() {
 
                 <Grid item xs={4}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/wPEpYQo.png" className="fotosDev"/>
+                        <img src="https://imgur.com/wPEpYQo.png" className="fotosDev"  referrerPolicy="no-referrer"/>
                         <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center">Nicolle Sanches</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard'>Formada no Bootcamp de Desenvolvedora Java. Sou apaixonada por desafios e Programação. A minha determinação é evidenciada pela resiliência. Tenho como objetivo encontrar soluções e simplificar a vida das pessoas com a Tecnologia.</Typography>
@@ -195,7 +195,7 @@ function Sobre() {
 
                 <Grid item xs={4}>
                     <Box paddingX={5} textAlign={'center'}>
-                        <img src="https://imgur.com/YV4G0Yl.png" className="fotosDev"/>
+                        <img src="https://imgur.com/YV4G0Yl.png" className="fotosDev"  referrerPolicy="no-referrer"/>
                         <Typography variant="h6" className="nomeDev" gutterBottom component="h3" align="center">Yngrid Padilha</Typography>
                         <Typography variant="body1" gutterBottom component="h3" align="center" className="subtituloSobre">Dev Full Stack</Typography>
                         <Typography variant="body2" gutterBottom color="textPrimary" component="h3" align="center" className='devscard'>Enquanto estudante de Análise e Desenvolvimento de Sistemas, vejo a possibilidade de mudanças com a ajuda da tecnologia, criatividade, persistência e trabalho em equipe. Me mover pelo novo é a minha paixão.</Typography>
