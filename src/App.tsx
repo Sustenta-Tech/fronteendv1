@@ -24,6 +24,8 @@ import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCa
 import Carrinho from './paginas/carrinho/Carrinho';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MyChatbot from './components/chatbot/chatbot';
+import BotaoChat from './components/estaticos/botaoChat/BotaoChat';
 
 
 function App() {
@@ -71,9 +73,14 @@ function App() {
             <Route path="/formularioCategoria" element={<CadastroCategoria />} />
             <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+
+            {/* <Route path='chat' element={<MyChatbot/>} /> */}
+
             
           </Routes>
+          {/* <MyChatbot/> */}
           <Footer />
+          <BotaoChat/>
         </BrowserRouter>
         </Provider>
       </MuiThemeProvider>
