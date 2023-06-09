@@ -9,7 +9,7 @@ import './Sobre.css'
 function Sobre() {
     return (
         <>
-            <Grid container md={12} direction="row" justifyContent="center" alignItems="center" className='titulo'  >
+            <Grid container md={12} direction="row" justifyContent="center" alignItems="center" className='titulo'>
                 <Grid md={6} alignItems="center" item>
                     <Box>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" className='devscard2'>Somos Sustenta Tech</Typography>
