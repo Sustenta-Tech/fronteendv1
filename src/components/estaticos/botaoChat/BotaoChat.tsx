@@ -44,25 +44,3 @@ function BotaoChat() {
 }
 
 export default BotaoChat;
-
-// const BotaoChat: React.FC = () => {
-//     let navigate = useNavigate();
-//     const openChat = () => {
-//         navigate("/chat")
-//     };
-
-//     return (
-//         <div >
-
-
-//             <div>
-//                 <button onClick={openChat} className="floating-button">
-//                     +
-//                 </button>
-//             </div>
-
-//         </div>
-//     );
-// };
-
-// export default BotaoChat;
