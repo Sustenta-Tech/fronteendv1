@@ -3,12 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import User from '../../models/User';
 import { cadastroUsuario } from '../../services/Service';
 import { Grid, Typography, Button, TextField } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
 import { toast } from 'react-toastify';
 
 function CadastroUsuario() {
+
+    const theme =  useTheme();
 
     const navigate = useNavigate();
     const [confirmarSenha, setConfirmarSenha] = useState<string>("")
@@ -111,7 +113,7 @@ function CadastroUsuario() {
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button type='submit' variant='contained' color='primary'style={{ backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }}>
                                 Cadastrar
                             </Button>
                         </Box>

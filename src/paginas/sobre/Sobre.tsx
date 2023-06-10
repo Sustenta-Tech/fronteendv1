@@ -29,7 +29,7 @@ function Sobre() {
                     </Box>
                 </Grid>
             </Grid>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className='cardmissao' style={{ color: theme.palette.secondary.contrastText}}>
+            <Grid container direction="row" justifyContent="center" alignItems="center" className='cardmissao' style={{ backgroundColor: theme.palette.background.paper}}>
                 <Grid item xs={6}>
                     <Box paddingX={5} textAlign={'center'}>
                         <img src="https://imgur.com/xQNjX0E.png"  referrerPolicy="no-referrer" />
@@ -43,7 +43,7 @@ function Sobre() {
                 </Grid>
             </Grid>
 
-            <Grid container direction="row" justifyContent="center" alignItems="center" className='titulo'>
+            <Grid container direction="row" justifyContent="center" alignItems="center" className='titulo' style={{ backgroundColor: theme.palette.background.default }}>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={15}>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" className='devscard2' style={{ color: theme.palette.secondary.contrastText}} >Sobre o Projeto</Typography>
@@ -59,7 +59,7 @@ function Sobre() {
 
             {/* GRID DESENVOLVEDOR */}
 
-            <Grid container spacing={5} className='cardtech'>
+            <Grid container spacing={2} className='cardtech'>
                 <Grid item xs={12} direction="row" justifyContent="center" alignItems="center">
                     <Box paddingX={15}>
                         <Typography variant="h4"component="h3" align="center" className=''>Conheça a Equipe</Typography>

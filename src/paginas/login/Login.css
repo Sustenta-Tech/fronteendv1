@@ -1,6 +1,6 @@
 .tituloLogin {
     /* font-size: 2rem !important; */
-    /* color: var(--cor-verde-claro) !important; */
+    color: var(--cor-verde-claro) !important;
     /* text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.627); */
     font-size: 34px;
     font-weight: 500;
@@ -20,7 +20,8 @@
 }
 
 .grid {
-    min-height: 100vh;
+    /* min-height anterior 100vh (faixa branca cortando a página) */
+    min-height: 90vh;
     justify-content: center;
     align-items: center;
     /* background-color: #EBEBEB; */

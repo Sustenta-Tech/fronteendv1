@@ -19,18 +19,18 @@ function Contato() {
 
     return (
         <>
-            <Grid container direction='row' justifyContent='center' alignItems='center' style={{ backgroundColor: theme.palette.background.paper  }} className="gridContato">
+            <Grid container direction='row' justifyContent='center' alignItems='center' style={{ backgroundColor: theme.palette.background.paper}} className="gridContato">
                 <Grid item xs={12} sm={6} className="alinhamento">
                     <Box textAlign='center'>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' className='textoPrimario'>Contato</Typography>
-                        <Typography variant='h6' color='textPrimary' align='center' className='textoSecundario'paragraph>Confira nossos canais de contato. Se preferir, preencha o formulário ao lado para nos contatar.</Typography>
-                        <Typography variant='h6' color='textPrimary' align='center' className="telicon" paragraph>
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' className='textoPrimario' style={{ color: theme.palette.secondary.contrastText}}>Contato</Typography>
+                        <Typography variant='h6' color='textPrimary' align='center' className='textoSecundario'paragraph  style={{ color: theme.palette.secondary.contrastText}}>Confira nossos canais de contato. Se preferir, preencha o formulário ao lado para nos contatar.</Typography>
+                        <Typography variant='h6' color='textPrimary' align='center' className="telicon" paragraph  style={{ color: theme.palette.secondary.contrastText}}>
                             <img src="https://imgur.com/5L8QllA.png" alt="Ícone de telefone" /> (11) 2556-7458
                         </Typography>
-                        <Typography variant='h6' color='textPrimary' align='center' className="emailicon" paragraph>
+                        <Typography variant='h6' color='textPrimary' align='center' className="emailicon" paragraph style={{ color: theme.palette.secondary.contrastText}}>
                             <img src="https://imgur.com/4pKmYHP.png" alt="Ícone de email" /> sustentatechintegrador@gmail.com
                         </Typography>
-                        <Typography variant='h6' color='textPrimary' align='center' className="emailicon" paragraph>
+                        <Typography variant='h6' color='textPrimary' align='center' className="emailicon" paragraph style={{ color: theme.palette.secondary.contrastText}}>
                             <img src="https://imgur.com/uYZcIKU.png" alt="Ícone de localizacao" /> Endereço: São Paulo - SP
                         </Typography>
                     </Box>
@@ -77,7 +77,7 @@ function Contato() {
                                 />
                             </Box>
                             <Box textAlign='center' my={2}>
-                                <Button variant='contained' color='primary' type='submit' onClick={handleEnviar}>Enviar</Button>
+                                <Button variant='contained' color='primary' type='submit' onClick={handleEnviar} style={{ backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }}>Enviar</Button>
                             </Box>
                         </form>
                     </main>

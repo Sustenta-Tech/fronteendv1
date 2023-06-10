@@ -1,5 +1,8 @@
 import React from 'react';
 import './Carrinho.css';
+import { useTheme } from '@mui/material';
+
+const theme =  useTheme();
 
 const Carrinho: React.FC = () => {
   return (

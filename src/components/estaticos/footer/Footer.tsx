@@ -17,7 +17,7 @@ function Footer() {
             <Grid container md={12} className="gridFooter" style={{ backgroundColor: theme.palette.background.default }}>
                 <Grid item md={2} sm={6} xs={12}>
                     <Box display="flex" flexDirection="column" className="marginBottonFooter">
-                        <Typography variant="h6" align="center">Redes Sociais</Typography>
+                        <Typography variant="h6" align="center" style={{ color: theme.palette.secondary.contrastText}}>Redes Sociais</Typography>
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="/" target="_blank">
                                 <LinkedInIcon style={{ fontSize: 35, color: "black" }} />
@@ -33,7 +33,7 @@ function Footer() {
                 </Grid>
                 <Grid item md={2} sm={6} xs={12}>
                     <Box display="flex" flexDirection="column" className="marginBottonFooter">
-                        <Typography variant="h6" align="center" >Formas de Pagamento</Typography>
+                        <Typography variant="h6" align="center" style={{ color: theme.palette.secondary.contrastText}}>Formas de Pagamento</Typography>
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="/" target="_blank">
                                 <CreditCardIcon style={{ fontSize: 35, color: "black" }} />
@@ -46,24 +46,24 @@ function Footer() {
                 </Grid>
                 <Grid item md={3} sm={6} xs={12}>
                     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="space-around">
-                        <Typography variant="h6" align="center" >SustentaTech</Typography>
-                        <Typography align="center" gutterBottom className="textFooter">O ecommerce SustentaTech não apenas oferece boas compras, mas também permite que você ajude o meio ambiente ao colaborar com a Agenda 2030 da ONU.</Typography>
+                        <Typography variant="h6" align="center"style={{ color: theme.palette.secondary.contrastText}}>SustentaTech</Typography>
+                        <Typography align="center" gutterBottom className="textFooter" style={{ color: theme.palette.secondary.contrastText}}>O ecommerce SustentaTech não apenas oferece boas compras, mas também permite que você ajude o meio ambiente ao colaborar com a Agenda 2030 da ONU.</Typography>
                     </Box>
                 </Grid>
                 <Grid item md={5} sm={6} xs={12}>
                     <Box display="flex" justifyContent="space-around">
                         <Box alignItems="center" justifyContent="center" >
-                            <Typography variant="h6" align="center" >Projeto</Typography>
+                            <Typography variant="h6" align="center"style={{ color: theme.palette.secondary.contrastText}}>Projeto</Typography>
                             <img src='https://imgur.com/xu73cBI.png' alt="logo" referrerPolicy="no-referrer" />
                         </Box>
 
                         <Box justifyContent="center">
-                            <Typography variant="h6" align="center">Patrocinador</Typography>
+                            <Typography variant="h6" align="center" style={{ color: theme.palette.secondary.contrastText}}>Patrocinador</Typography>
                             <img src='https://imgur.com/Z6oteMk.png' alt="logo" referrerPolicy="no-referrer" />
                         </Box>
 
                         <Box justifyContent="center">
-                            <Typography variant="h6" align="center">Apoio</Typography>
+                            <Typography variant="h6" align="center" style={{ color: theme.palette.secondary.contrastText}}>Apoio</Typography>
                             <img src='https://imgur.com/MG0lNNy.png' alt="logo" referrerPolicy="no-referrer" />
                         </Box>
                     </Box>
