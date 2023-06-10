@@ -109,11 +109,11 @@ function CadastroUsuario() {
                         <TextField className='textField' value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='url foto' variant='outlined' name='foto' margin='dense' fullWidth />
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
-                                <Button variant='contained' color='secondary' className='btnCancelar'>
+                                <Button variant='contained' color='secondary' className='btnCancelar' style={{ backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }} >
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type='submit' variant='contained' color='primary'style={{ backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }}>
+                            <Button type='submit' variant='contained' color='primary'style={{ backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText }}>
                                 Cadastrar
                             </Button>
                         </Box>

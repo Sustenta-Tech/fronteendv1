@@ -54,13 +54,13 @@ function Admin() {
             <Box m={2} display="flex" justifyContent="center" >
 
                 <Link to="/formularioProduto">
-                    <Button variant="contained" size='small' color="secondary">
+                    <Button variant="contained" size='small' color='primary' style={{ backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }}>
                         Cadastrar um novo produto
                     </Button>
                 </Link>
 
                 <Link to="/formularioCategoria">
-                    <Button variant="contained" size='small' color="secondary" style={{ marginLeft: '10px' }}>
+                    <Button variant="contained" size='small' color="secondary"  style={{ marginLeft: '10px', backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }}>
                         Cadastrar uma nova categoria
                     </Button>
                 </Link>
@@ -73,7 +73,7 @@ function Admin() {
 
 
                 <AppBar position="static">
-                    <Tabs centered indicatorColor="secondary" onChange={handleChange}>
+                    <Tabs centered indicatorColor="secondary" onChange={handleChange}  style={{ backgroundColor: theme.palette.secondary.dark, color: theme.palette.secondary.contrastText }}>
                         <Tab label="Todas os produtos" value="1" />
                         <Tab label="Todas as categorias" value="2" />
                     </Tabs>

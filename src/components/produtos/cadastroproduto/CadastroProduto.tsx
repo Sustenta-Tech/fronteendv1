@@ -8,8 +8,12 @@ import { busca, buscaId, post, put } from '../../../services/Service';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useTheme } from '@mui/material';
 
 function CadastroProduto() {
+
+    const theme =  useTheme();
+    
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
@@ -173,7 +177,7 @@ function CadastroProduto() {
                     id="preco" label="Preco" name="preco" variant="outlined" margin="dense" fullWidth />
 
                 <FormControl >
-                    <InputLabel id="demo-simple-select-helper-label" color='secondary'>Categoria </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label" style={{ color: theme.palette.secondary.contrastText }}>Categoria </InputLabel>
                     <Select
             
                         labelId="demo-simple-select-helper-label"
@@ -190,7 +194,7 @@ function CadastroProduto() {
                         }
                     </Select>
                     <FormHelperText color='secondary' >Escolha uma categoria para o produto</FormHelperText>
-                    <Button type="submit" variant="contained" color="secondary">
+                    <Button type="submit" variant="contained" style={{ backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText }}>
                         Finalizar
                     </Button>
                 </FormControl>

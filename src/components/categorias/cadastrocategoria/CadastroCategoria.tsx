@@ -8,10 +8,14 @@ import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import './CadastroCategoria.css'
+import { useTheme } from '@mui/material';
 
 
 
 function CadastroCategoria() {
+
+    const theme =  useTheme();
+    
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -121,7 +125,7 @@ function CadastroCategoria() {
 
                 <TextField className='textFieldCateg' value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
 
-                <Button type="submit" variant="contained" color="secondary">
+                <Button type="submit" variant="contained" style={{ backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText }}>
                     Finalizar
                 </Button>
             </form>
