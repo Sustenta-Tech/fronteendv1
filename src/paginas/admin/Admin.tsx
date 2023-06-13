@@ -45,20 +45,20 @@ function Admin() {
     return (
         <>
             <Box display="flex" justifyContent="center" >
-                <img src="https://imgur.com/TQKUqDN.png" className='imgAdm' alt="Foto apresentando o Painel Administrativo" referrerPolicy="no-referrer"/>
+                <img src="https://imgur.com/TQKUqDN.png" className='imgAdm' alt="Foto apresentando o Painel Administrativo" referrerPolicy="no-referrer" />
             </Box>
 
             <Box m={2} display="flex" justifyContent="center" >
 
                 <Link to="/formularioProduto">
                     <Button variant="contained" size='small' color="secondary">
-                        Cadastrar um novo produto
+                        Cadastrar produto
                     </Button>
                 </Link>
 
                 <Link to="/formularioCategoria">
                     <Button variant="contained" size='small' color="secondary" style={{ marginLeft: '10px' }}>
-                        Cadastrar uma nova categoria
+                        Cadastrar categoria
                     </Button>
                 </Link>
 
@@ -71,7 +71,7 @@ function Admin() {
 
                 <AppBar position="static">
                     <Tabs centered indicatorColor="secondary" onChange={handleChange}>
-                        <Tab label="Todas os produtos" value="1" />
+                        <Tab label="Todos os produtos" value="1" />
                         <Tab label="Todas as categorias" value="2" />
                     </Tabs>
                 </AppBar>

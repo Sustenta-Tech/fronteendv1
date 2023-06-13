@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Card, CardContent, Typography } from '@material-ui/core';
+import { Link, useNavigate } from 'react-router-dom'
+import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './ListaCategoria.css';
 import { busca } from '../../../services/Service';
@@ -55,34 +55,15 @@ function ListaCategoria() {
                 categorias.map(categoria => (
                     <Box m={2} >
                         <Card variant="outlined">
-                            <CardContent>
-                                <Typography variant="h5" component="h2">
-                                    {categoria.tipo}
-                                </Typography>
-                            </CardContent>
-                            <CardContent>
-                                <Typography variant="h5" component="h2">
-                                    {categoria.descricao}
-                                </Typography>
-                            </CardContent>
-                            {/* <CardActions>
-                                <Box display="flex" justifyContent="center" mb={1.5} >
-                                    <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                                                atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                    <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" size='small' color="secondary">
-                                                deletar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                </Box>
-                            </CardActions> */}
+                            <Link to={`/produtosCategoria/${categoria.id}`} className="text-decorator-none" >
+
+                                <CardContent>
+                                    <Typography variant="h5" component="h2">
+                                        {categoria.tipo}
+                                    </Typography>
+                                </CardContent>
+
+                            </Link>
                         </Card>
                     </Box>
                 ))

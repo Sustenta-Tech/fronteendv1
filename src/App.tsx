@@ -26,6 +26,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MyChatbot from './components/chatbot/chatbot';
 import BotaoChat from './components/estaticos/botaoChat/BotaoChat';
+import ProdutosCategoria from './components/categorias/produtoscategoria/ProdutosCategoria';
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
             <Route path="/cadastro" element={<CadastroUsuario />} />
             <Route path="/carrinho" element={<Carrinho />} />
 
+            <Route path="/produtosCategoria/:id" element={<ProdutosCategoria/>} />
             <Route path="/formularioProduto" element={<CadastroProduto />} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
@@ -75,7 +77,6 @@ function App() {
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
             
           </Routes>
-          {/* <MyChatbot/> */}
           <Footer />
           <BotaoChat/>
         </BrowserRouter>

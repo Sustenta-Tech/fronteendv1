@@ -56,7 +56,7 @@ function DeletarProduto() {
             }
         });
         navigate('/admin')
-        toast.success('Produto deletada com sucesso', {
+        toast.success('Produto deletado com sucesso!', {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,
