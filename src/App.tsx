@@ -21,9 +21,11 @@ import CadastroCategoria from './components/categorias/cadastrocategoria/Cadastr
 import DeletarProduto from './components/produtos/deletarproduto/DeletarProduto';
 import Admin from './paginas/admin/Admin';
 import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCategoria';
-import Carrinho from './paginas/carrinho/Carrinho';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PaginaCarrinho from './paginas/carrinho/PaginaCarrinho';
+import Carrinho from './components/carrinho/Carrinho';
+import { CarrinhoProvider } from './store/carrinhocontext/CarrinhoContext';
 
 
 function App() {
@@ -51,6 +53,7 @@ function App() {
         <ToastContainer />
         <BrowserRouter>
           <Navbar />
+          <CarrinhoProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
@@ -73,6 +76,8 @@ function App() {
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
             
           </Routes>
+
+          </CarrinhoProvider>
           <Footer />
         </BrowserRouter>
         </Provider>
