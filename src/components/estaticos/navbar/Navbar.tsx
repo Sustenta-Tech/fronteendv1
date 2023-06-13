@@ -69,8 +69,10 @@ function Navbar() {
                         </Link>
 
                         <Link to='/carrinho' className='text-decorator-none'>
-                            <Box mx={1} className='cursor'>
+                            <Box mx={1} className='cart'>
+                                <span className='cart_status'>15</span>
                                 <ShoppingCartIcon />
+                                
                             </Box>
                         </Link>
                     </Box>

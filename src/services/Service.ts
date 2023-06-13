@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL
-    // baseURL: "https://sustentatech.onrender.com"
+    //baseURL: import.meta.env.VITE_API_URL
+    baseURL: "https://sustentatech.onrender.com"
 })
 
 export const cadastroUsuario = async (url: any, dados: any, setDado: any) => {

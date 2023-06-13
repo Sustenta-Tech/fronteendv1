@@ -1,6 +1,7 @@
 import Categoria from "./Categoria";
 
 interface Produto{
+    _id: any;
     id: number;
     nome: string;
     preco: number;
