@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Button, Card, CardActions, CardContent, Grid, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
@@ -8,11 +8,16 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import Categoria from '../../../models/Categoria';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import { CarrinhoContext } from '../../../store/carrinhocontext/CarrinhoContext';
+import './ProdutosCategoria.css'
 
 
 function ProdutosCategoria() {
     const [categoria, setCategoria] = useState<Categoria | null>(null);
     let navigate = useNavigate();
+
+    const { adicionarAoCarrinho } = useContext(CarrinhoContext);
+
     const { id } = useParams<{ id: string }>();
 
     const token = useSelector<TokenState, TokenState['tokens']>((state) => state.tokens);
@@ -57,7 +62,7 @@ function ProdutosCategoria() {
 
     return (
         <>
-            <Grid item xs={12} justifyContent="center" className='fundo' >
+            <Grid item xs={12} justifyContent="center" className='fundo' id="gridProdCat">
 
                 <Box justifyContent="center" textAlign="center" >
                     <Typography variant="h5" component="h2">
@@ -99,8 +104,14 @@ function ProdutosCategoria() {
                                     <Box display="flex" justifyContent="center" mb={1.5}>
                                         <Link to="" className="text-decorator-none">
                                             <Box mx={1} >
-                                                <Button variant="contained" className="marginLeft" size="small" color="primary">
-                                                    Comprar
+                                                <Button
+                                                    variant="contained"
+                                                    className="marginLeft"
+                                                    size="small"
+                                                    color="primary"
+                                                    onClick={() => adicionarAoCarrinho(produto)}
+                                                >
+                                                    Adicionar ao carrinho
                                                 </Button>
                                                 <Button variant="contained" size="small" color="secondary">
                                                     <FavoriteIcon />
@@ -112,7 +123,7 @@ function ProdutosCategoria() {
                             </Card>
                         ))
                     ) : (
-                        <Typography variant="h5" component="h2">
+                        <Typography variant="body1" component="h2" style={{ padding: '20px' }}>
                             Nenhum produto disponível nessa categoria.
                         </Typography>
                     )}

@@ -7,7 +7,7 @@ import { buscaProduto } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import SearchIcon from '@material-ui/icons/Search';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import { CarrinhoContext, CarrinhoProvider } from '../../../store/carrinhocontext/CarrinhoContext';
+import { CarrinhoContext } from '../../../store/carrinhocontext/CarrinhoContext';
 
 
 

@@ -23,10 +23,8 @@ import Admin from './paginas/admin/Admin';
 import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCategoria';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import MyChatbot from './components/chatbot/chatbot';
 import BotaoChat from './components/estaticos/botaoChat/BotaoChat';
 import ProdutosCategoria from './components/categorias/produtoscategoria/ProdutosCategoria';
-import PaginaCarrinho from './paginas/carrinho/PaginaCarrinho';
 import Carrinho from './components/carrinho/Carrinho';
 import { CarrinhoProvider } from './store/carrinhocontext/CarrinhoContext';
 

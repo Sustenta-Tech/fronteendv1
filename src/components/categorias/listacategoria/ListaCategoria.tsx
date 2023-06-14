@@ -50,25 +50,26 @@ function ListaCategoria() {
 
 
     return (
-        <>
-            {
-                categorias.map(categoria => (
-                    <Box m={2} >
-                        <Card variant="outlined">
-                            <Link to={`/produtosCategoria/${categoria.id}`} className="text-decorator-none" >
-
-                                <CardContent>
-                                    <Typography variant="h5" component="h2">
-                                        {categoria.tipo}
-                                    </Typography>
-                                </CardContent>
-
-                            </Link>
-                        </Card>
-                    </Box>
-                ))
-            }
-        </>
+        <Box display="flex" justifyContent="center" alignContent="center" flexWrap="wrap" className='fundo'>
+            <Box m={2} className='boxProdCateg' display="flex" alignItems="center" justifyContent="center" alignContent="center">
+                <Typography variant="h5" component="h2">
+                    Filtrar por categoria:
+                </Typography>
+            </Box>
+            {categorias.map((categoria) => (
+                <Box key={categoria.id} m={2} className='boxProdCateg' display="flex" justifyContent="center" alignContent="center">
+                    <Card variant="outlined" className='cardProdCateg' >
+                        <Link to={`/produtosCategoria/${categoria.id}`} className="text-decorator-none">
+                            <CardContent>
+                                <Typography variant="h6" component="h2">
+                                    {categoria.tipo}
+                                </Typography>
+                            </CardContent>
+                        </Link>
+                    </Card>
+                </Box>
+            ))}
+        </Box>
     );
 }
 

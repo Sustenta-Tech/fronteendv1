@@ -35,7 +35,7 @@ function AdminCardCategoria() {
             {
                 categorias.map(categoria => (
                     <Box m={2} >
-                        <Card variant="outlined" className='cardPostagem'>
+                        <Card variant="outlined" >
                             <CardContent >
                                 <Typography variant="h5" component="h2">
                                     {categoria.tipo}
