@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext } from 'react';
 import Produto from '../../models/Produto';
+import { toast } from 'react-toastify';
 
 interface CarrinhoContextData {
     produtosNoCarrinho: Produto[];
@@ -40,11 +41,31 @@ export const CarrinhoProvider: React.FC = ({ children }) => {
 
             setProdutosNoCarrinho([...produtosNoCarrinho, novoProduto]);
         }
+        toast.success('Item adicionado com sucesso!', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
     };
 
     const removerDoCarrinho = (produto: Produto) => {
         const produtosAtualizados = produtosNoCarrinho.filter((p) => p.id !== produto.id);
-        setProdutosNoCarrinho(produtosAtualizados);
+        setProdutosNoCarrinho(produtosAtualizados)
+        toast.success('Item removido com sucesso!', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
     };
 
     return (
