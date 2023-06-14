@@ -3,14 +3,17 @@ import Produto from '../../models/Produto';
 import { CarrinhoContext } from '../../store/carrinhocontext/CarrinhoContext';
 import './Carrinho.css'
 import { Box, Button, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
-import { main } from '@popperjs/core';
 
 interface CarrinhoProps {
   produtosNoCarrinho: Produto[];
 }
 
 function Carrinho() {
-  const { produtosNoCarrinho } = useContext(CarrinhoContext);
+  const { produtosNoCarrinho, removerDoCarrinho } = useContext(CarrinhoContext);
+
+  const handleRemoverDoCarrinho  = (produto: Produto) => {
+    removerDoCarrinho(produto);
+  };
 
   return (
     <main className='bodycar'>
@@ -43,7 +46,7 @@ function Carrinho() {
                     <TableCell>R${produto.preco},00</TableCell>
                     <TableCell>{produto.quantidade}</TableCell>
                     <TableCell>
-                      <Button variant='contained' color='secondary'>
+                      <Button variant='contained' color='primary' onClick={() => handleRemoverDoCarrinho(produto)}>
                         Remover
                       </Button>
                     </TableCell>

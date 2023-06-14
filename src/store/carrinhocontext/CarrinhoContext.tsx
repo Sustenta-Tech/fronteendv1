@@ -4,12 +4,15 @@ import Produto from '../../models/Produto';
 interface CarrinhoContextData {
     produtosNoCarrinho: Produto[];
     adicionarAoCarrinho: (produto: Produto) => void;
+    removerDoCarrinho: (produto: Produto) => void;
 }
 
 export const CarrinhoContext = createContext<CarrinhoContextData>({
     produtosNoCarrinho: [],
     adicionarAoCarrinho: () => { },
+    removerDoCarrinho: () => { },
 });
+
 
 export const CarrinhoProvider: React.FC = ({ children }) => {
     const [produtosNoCarrinho, setProdutosNoCarrinho] = useState<Produto[]>([]);
@@ -39,8 +42,13 @@ export const CarrinhoProvider: React.FC = ({ children }) => {
         }
     };
 
+    const removerDoCarrinho = (produto: Produto) => {
+        const produtosAtualizados = produtosNoCarrinho.filter((p) => p.id !== produto.id);
+        setProdutosNoCarrinho(produtosAtualizados);
+    };
+
     return (
-        <CarrinhoContext.Provider value={{ produtosNoCarrinho, adicionarAoCarrinho }}>
+        <CarrinhoContext.Provider value={{ produtosNoCarrinho, adicionarAoCarrinho, removerDoCarrinho }}>
             {children}
         </CarrinhoContext.Provider>
     );

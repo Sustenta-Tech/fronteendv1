@@ -26,7 +26,6 @@ function ListaProdutos() {
 
   return (
     <>
-    <Carrinho />
       <Grid container xs={12} direction="row" justifyContent="center" alignItems="flex-start"  >
         <Box display="flex" flexDirection="column" alignItems="center" pt={1} pb={1}>
           <Box display="flex" alignItems="center" mb={1} pt={1} pb={0.5}>
