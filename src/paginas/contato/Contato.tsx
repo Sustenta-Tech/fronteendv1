@@ -4,6 +4,7 @@ import { Button, Grid, Snackbar, TextField, Typography } from "@material-ui/core
 import { Box } from "@mui/material";
 
 function Contato() {
+    
     const [enviado, setEnviado] = useState(false);
 
     const handleEnviar = () => {
@@ -16,11 +17,11 @@ function Contato() {
 
     return (
         <>
-            <Grid container direction='row' justifyContent='center' alignItems='center' style={{ backgroundColor:"#8cb570" }} className="gridContato">
+            <Grid container direction='row' justifyContent='center' alignItems='center' style={{ backgroundColor: "#8cb570" }} className="gridContato">
                 <Grid item xs={12} sm={6} className="alinhamento">
                     <Box textAlign='center'>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' className='textoPrimario'>Contato</Typography>
-                        <Typography variant='h6' color='textPrimary' align='center' className='textoSecundario'paragraph>Confira nossos canais de contato. Se preferir, preencha o formulário ao lado para nos contatar.</Typography>
+                        <Typography variant='h6' color='textPrimary' align='center' className='textoSecundario' paragraph>Confira nossos canais de contato. Se preferir, preencha o formulário ao lado para nos contatar.</Typography>
                         <Typography variant='h6' color='textPrimary' align='center' className="telicon" paragraph>
                             <img src="https://imgur.com/5L8QllA.png" alt="Ícone de telefone" /> (11) 2556-7458
                         </Typography>
@@ -32,7 +33,7 @@ function Contato() {
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={4} alignItems='center' style={{ backgroundColor:"#fff" }} className="teste">
+                <Grid item xs={12} sm={4} alignItems='center' style={{ backgroundColor: "#fff" }} className="teste">
                     <main className="contato">
                         <form className="formulario">
                             <TextField
@@ -82,6 +83,8 @@ function Contato() {
                 onClose={handleFecharSnackbar}
                 message="Mensagem enviada com sucesso!"
             />
+
+
         </>
     )
 }

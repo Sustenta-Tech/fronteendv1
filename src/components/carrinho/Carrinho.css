@@ -1,0 +1,29 @@
+.bodycar {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #8cb570;
+    min-height: 65vh;
+}
+
+.tituloCarrinho {
+    text-align: center;
+}
+
+.infoCarrinho {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 50px;
+}
+
+main {
+    margin: 20px;
+}
+
+
+.formularioCarrinho {
+    max-width: 500px;
+    background-color: rgba(240, 255, 255, 0.361);
+    border-radius: 10px;
+    margin: 20px;
+}
