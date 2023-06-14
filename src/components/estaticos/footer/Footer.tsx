@@ -20,13 +20,13 @@ function Footer() {
                         <Typography variant="h6" align="center" style={{ color: theme.palette.secondary.contrastText}}>Redes Sociais</Typography>
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 35, color: "black" }} />
+                                <LinkedInIcon style={{ fontSize: 35, color: theme.palette.secondary.contrastText }} />
                             </a>
                             <a href="/" target="_blank">
-                                <GitHubIcon style={{ fontSize: 35, color: "black" }} />
+                                <GitHubIcon style={{ fontSize: 35, color: theme.palette.secondary.contrastText }} />
                             </a>
                             <a href="/" target="_blank">
-                                <WhatsAppIcon style={{ fontSize: 35, color: "black" }} />
+                                <WhatsAppIcon style={{ fontSize: 35, color: theme.palette.secondary.contrastText }} />
                             </a>
                         </Box>
                     </Box>
@@ -36,10 +36,10 @@ function Footer() {
                         <Typography variant="h6" align="center" style={{ color: theme.palette.secondary.contrastText}}>Formas de Pagamento</Typography>
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="/" target="_blank">
-                                <CreditCardIcon style={{ fontSize: 35, color: "black" }} />
+                                <CreditCardIcon style={{ fontSize: 35, color: theme.palette.secondary.contrastText}} />
                             </a>
                             <a href="/" target="_blank">
-                                <PhoneIphoneIcon style={{ fontSize: 35, color: "black" }} />
+                                <PhoneIphoneIcon style={{ fontSize: 35, color: theme.palette.secondary.contrastText }} />
                             </a>
                         </Box>
                     </Box>

@@ -25,6 +25,11 @@
      padding: 20px;
  }
 
+ .titulomissao{
+    color: #fff !important;
+ }
+
+
  .devscard {
      border-top: #8cb570 solid 2px;
      /* padding-top: 10px; */

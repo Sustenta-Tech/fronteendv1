@@ -37,8 +37,8 @@ function Sobre() {
                 </Grid>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={15} >
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" className='devscard'>Nossa Missão</Typography>
-                        <Typography variant="body1" gutterBottom color="textPrimary" component="h5" align="center" className='devscard'>A Sustenta Tech acredita que juntos, podemos promover um futuro mais sustentável e ecologicamente viável. Oferecemos soluções que visam incentivar a utilização de fontes renováveis de energia, garantindo produtos de alta qualidade e confiabilidade.</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h3" align="center" className='titulomissao'>Nossa Missão</Typography>
+                        <Typography variant="body1" gutterBottom color="textPrimary" component="h5" align="center" className='titulomissao'>A Sustenta Tech acredita que juntos, podemos promover um futuro mais sustentável e ecologicamente viável. Oferecemos soluções que visam incentivar a utilização de fontes renováveis de energia, garantindo produtos de alta qualidade e confiabilidade.</Typography>
                     </Box>
                 </Grid>
             </Grid>
