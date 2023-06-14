@@ -8,6 +8,7 @@ import Produto from '../../../models/Produto';
 import SearchIcon from '@material-ui/icons/Search';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { CarrinhoContext } from '../../../store/carrinhocontext/CarrinhoContext';
+import ListaCategoria from '../../categorias/listacategoria/ListaCategoria';
 
 
 
@@ -62,7 +63,8 @@ function ListaProdutos() {
           </Box>
         </Grid>
       </Grid>
-      <Grid container xs={12} direction="row" justifyContent="center" alignItems="flex-start" className='fundo' style={{ backgroundColor: theme.palette.background.paper }}>
+
+      {/* <Grid container xs={12} direction="row" justifyContent="center" alignItems="flex-start" className='fundo' style={{ backgroundColor: theme.palette.background.paper }}>
         <Box display="flex" flexDirection="column" alignItems="center" pt={1} pb={1} >
           <Box display="flex" alignItems="center" mb={1} className='searchContainer'>
             <TextField
@@ -76,7 +78,10 @@ function ListaProdutos() {
             </Button>
           </Box>
         </Box>
-      </Grid>
+      </Grid> */}
+
+    <ListaCategoria />
+
       <Grid item xs={12} justifyContent="center" className='fundo' style={{ backgroundColor: theme.palette.background.paper }}>
         <Box display="flex" flexWrap="wrap" justifyContent="center" className='boxProduto'>
           {produtos.map((produto) => (

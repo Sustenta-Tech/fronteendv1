@@ -15,7 +15,6 @@ function Home() {
                 <Grid item xs={12}>
                     <Carrossel />
 
-                    <ListaCategoria />
                     
                     <ListaProdutos />
 
