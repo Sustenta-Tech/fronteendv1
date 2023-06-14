@@ -7,6 +7,7 @@ import CarrosselInfo from "../../components/carrosselInfo/CarrosselInfo";
 import ListaProdutos from "../../components/produtos/listaproduto/ListaProdutos";
 
 function Home() {
+    
     return (
         <>
             <Grid container >

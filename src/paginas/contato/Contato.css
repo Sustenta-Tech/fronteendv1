@@ -2,15 +2,15 @@
 @import url(https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap);
 
 
-.corPrimaria {
+/* .corPrimaria {
   background-color: "#8cb570";
-}
+} */
 
 .contato {
   display: flex;
   gap: 3rem;
   justify-content: center;
-  padding: 40px;
+  padding: 0px;
 }
 
 .teste {
@@ -20,14 +20,18 @@
 }
 
 .gridContato {
-  padding: 40px;
+  padding: 30px;
 }
 
 .formulario {
   width: 80%;
 }
 
-
+.textFieldCont {
+  background-color: #EBEBEB;
+  border-radius: 5px;
+  margin: 10px;
+}
 
 #sobre {
   display: flex;

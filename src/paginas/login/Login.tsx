@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, Typography, TextField, Button } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../../services/Service';
@@ -11,6 +11,8 @@ import { toast } from 'react-toastify';
 
 function Login() {
 
+    const theme =  useTheme();
+    
     let history = useNavigate();
     const dispatch = useDispatch();
     const [token, setToken] = useState('');
@@ -71,11 +73,10 @@ function Login() {
     }
 
     return (
-        <Grid container direction='row' className='grid'>
+        <Grid container direction='row' className='grid' >
             <Grid xs={9} md={6} container  justifyContent='flex-end'>
                 <Box className='cardInfo'>
                     <form onSubmit={onSubmit}>
-
                         <Box textAlign='center'>
                             {/* <img src='src\imagens\logo+nome.png' /> */}
                             <Typography variant='h5' gutterBottom color='primary' component='h3' align='center' className='tituloLogin'>
@@ -88,7 +89,7 @@ function Login() {
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='Senha' name='senha' margin='normal' type='password' fullWidth />
 
                         <Box marginTop={2} textAlign='center'>
-                            <Button type='submit' variant='contained' color="primary" id='buttonEntrar'>
+                            <Button type='submit' variant='contained' color="primary" id='buttonEntrar' style={{ backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }}>
                                 Acessar
                             </Button>
                         </Box>

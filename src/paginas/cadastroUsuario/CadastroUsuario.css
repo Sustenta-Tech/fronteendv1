@@ -1,12 +1,10 @@
 .gridCadastroUser {
-    background-color: #EBEBEB;
+    height: 90vh
 }
 
 .imagem2 {
     background-image: url(https://poupaeganha.pt/wp-content/uploads/2022/10/poupar-energia.jpg);
-    /* background-repeat: no-repeat; */
-    /* width: 100%; */
-    min-height: 110vh;
+    height: 100%; 
     background-size: cover;
     background-position: center;
 }
@@ -23,12 +21,10 @@
 }
 
 .formCadastro {
-    background: linear-gradient(45deg, #254130, var(--cor-verde));
-    ;
+    background: linear-gradient(45deg, #254130, #8cb570);
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-
     border-radius: 20px;
 }
 

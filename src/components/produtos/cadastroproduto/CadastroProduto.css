@@ -1,10 +1,8 @@
 .formCadastroProd {
-    background: linear-gradient(10deg,  #254130,  var(--cor-verde));
-    ;;
+    background: linear-gradient(10deg,  #254130,  #8cb570);
     padding: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
-
+    /* margin-bottom: 20px; */
     border-radius: 20px;
 }
 

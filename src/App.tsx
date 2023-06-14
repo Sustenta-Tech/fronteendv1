@@ -24,29 +24,31 @@ import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCa
 import Carrinho from './paginas/carrinho/Carrinho';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { AppThemeProvider } from './themes/ThemeContext'
 
 function App() {
-  const THEME = createTheme({
-    palette: {
-      primary: {
-        light: '#052e21',
-        main: '#061b14',
-        dark: '#000000',
-        contrastText: '#fff',
-      },
-      secondary: {
-        light: '#b6f28d',
-        main: '#8cb570',
-        dark: '#89d953',
-        contrastText: '#061b14',
-      },
-    },
-  });
+  // const THEME = createTheme({
+  //   palette: {
+  //     primary: {
+  //       light: '#052e21',
+  //       main: '#061b14',
+  //       dark: '#000000',
+  //       contrastText: '#fff',
+  //     },
+  //     secondary: {
+  //       light: '#b6f28d',
+  //       main: '#8cb570',
+  //       dark: '#89d953',
+  //       contrastText: '#061b14',
+  //     },
+  //   },
+  // });
 
   return (
     <>
-      <MuiThemeProvider theme={THEME}>
+      {/* <MuiThemeProvider theme={THEME}> */}
+      <AppThemeProvider>
+
       <Provider store={store}>
         <ToastContainer />
         <BrowserRouter>
@@ -76,7 +78,8 @@ function App() {
           <Footer />
         </BrowserRouter>
         </Provider>
-      </MuiThemeProvider>
+      {/* </MuiThemeProvider> */}
+      </AppThemeProvider>
 
     </>
   )
