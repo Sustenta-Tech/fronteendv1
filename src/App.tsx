@@ -21,10 +21,14 @@ import CadastroCategoria from './components/categorias/cadastrocategoria/Cadastr
 import DeletarProduto from './components/produtos/deletarproduto/DeletarProduto';
 import Admin from './paginas/admin/Admin';
 import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCategoria';
-import Carrinho from './paginas/carrinho/Carrinho';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AppThemeProvider } from './themes/ThemeContext'
+import BotaoChat from './components/estaticos/botaoChat/BotaoChat';
+import ProdutosCategoria from './components/categorias/produtoscategoria/ProdutosCategoria';
+import Carrinho from './components/carrinho/Carrinho';
+import { CarrinhoProvider } from './store/carrinhocontext/CarrinhoContext';
+
 
 function App() {
   // const THEME = createTheme({
@@ -53,6 +57,7 @@ function App() {
         <ToastContainer />
         <BrowserRouter>
           <Navbar />
+          <CarrinhoProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
@@ -66,6 +71,7 @@ function App() {
             <Route path="/cadastro" element={<CadastroUsuario />} />
             <Route path="/carrinho" element={<Carrinho />} />
 
+            <Route path="/produtosCategoria/:id" element={<ProdutosCategoria/>} />
             <Route path="/formularioProduto" element={<CadastroProduto />} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
@@ -75,7 +81,10 @@ function App() {
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
             
           </Routes>
+
+          </CarrinhoProvider>
           <Footer />
+          <BotaoChat/>
         </BrowserRouter>
         </Provider>
       {/* </MuiThemeProvider> */}

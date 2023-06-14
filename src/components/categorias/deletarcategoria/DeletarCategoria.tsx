@@ -61,7 +61,7 @@ function DeletarCategoria() {
                 'Authorization': token
             }
         });
-        toast.success('Produto deletada com sucesso', {
+        toast.success('Categoria deletada com sucesso!', {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,

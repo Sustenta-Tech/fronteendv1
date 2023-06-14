@@ -15,8 +15,8 @@ function CadastroProduto() {
     const theme =  useTheme();
     
     let navigate = useNavigate();
-    const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
+    const { id } = useParams<{ id: string }>();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -42,7 +42,8 @@ function CadastroProduto() {
         {
             id: 0,
             tipo: '',
-            descricao: ''
+            descricao: '',
+            produto: null
         })
     const [produto, setProduto] = useState<Produto>({
         id: 0,

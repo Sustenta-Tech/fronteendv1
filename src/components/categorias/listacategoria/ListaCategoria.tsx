@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Card, CardContent, Typography } from '@material-ui/core';
+import { Link, useNavigate } from 'react-router-dom'
+import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './ListaCategoria.css';
 import { busca } from '../../../services/Service';
@@ -50,44 +50,26 @@ function ListaCategoria() {
 
 
     return (
-        <>
-            {
-                categorias.map(categoria => (
-                    <Box m={2} >
-                        <Card variant="outlined">
+        <Box display="flex" justifyContent="center" alignContent="center" flexWrap="wrap" className='fundo'>
+            <Box m={2} className='boxProdCateg' display="flex" alignItems="center" justifyContent="center" alignContent="center">
+                <Typography variant="h5" component="h2">
+                    Filtrar por categoria:
+                </Typography>
+            </Box>
+            {categorias.map((categoria) => (
+                <Box key={categoria.id} m={2} className='boxProdCateg' display="flex" justifyContent="center" alignContent="center">
+                    <Card variant="outlined" className='cardProdCateg' >
+                        <Link to={`/produtosCategoria/${categoria.id}`} className="text-decorator-none">
                             <CardContent>
-                                <Typography variant="h5" component="h2">
+                                <Typography variant="h6" component="h2">
                                     {categoria.tipo}
                                 </Typography>
                             </CardContent>
-                            <CardContent>
-                                <Typography variant="h5" component="h2">
-                                    {categoria.descricao}
-                                </Typography>
-                            </CardContent>
-                            {/* <CardActions>
-                                <Box display="flex" justifyContent="center" mb={1.5} >
-                                    <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                                                atualizar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                    <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
-                                        <Box mx={1}>
-                                            <Button variant="contained" size='small' color="secondary">
-                                                deletar
-                                            </Button>
-                                        </Box>
-                                    </Link>
-                                </Box>
-                            </CardActions> */}
-                        </Card>
-                    </Box>
-                ))
-            }
-        </>
+                        </Link>
+                    </Card>
+                </Box>
+            ))}
+        </Box>
     );
 }
 

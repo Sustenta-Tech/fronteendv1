@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Card, CardActions, CardContent, Button, Typography, TextField, Grid } from '@material-ui/core';
 import { Box, useTheme } from '@mui/material';
@@ -7,6 +7,7 @@ import { buscaProduto } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import SearchIcon from '@material-ui/icons/Search';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import { CarrinhoContext } from '../../../store/carrinhocontext/CarrinhoContext';
 
 
 
@@ -17,6 +18,7 @@ function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
   let navigate = useNavigate();
 
+  const { adicionarAoCarrinho } = useContext(CarrinhoContext);
 
   async function getProdutos() {
     await buscaProduto('/produtos', setProdutos);
@@ -103,8 +105,14 @@ function ListaProdutos() {
                 <Box display="flex" justifyContent="center" mb={1.5}>
                   <Link to="" className="text-decorator-none">
                     <Box mx={1} >
-                      <Button variant="contained" className="marginLeft" size="small" style={{ backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText }}>
-                        Comprar
+                      <Button
+                        variant="contained"
+                        className="marginLeft"
+                        size="small"
+                        style={{ backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText }}
+                        onClick={() => adicionarAoCarrinho(produto)}
+                      >
+                        Adicionar ao carrinho
                       </Button>
                       <Button variant="contained" size="small" style={{ backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }}>
                         <FavoriteIcon />
