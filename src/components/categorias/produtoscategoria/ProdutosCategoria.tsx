@@ -25,21 +25,21 @@ function ProdutosCategoria() {
 
     const token = useSelector<TokenState, TokenState['tokens']>((state) => state.tokens);
 
-    // useEffect(() => {
-    //     if (token === '') {
-    //         toast.error('Você precisa estar logado', {
-    //             position: 'top-right',
-    //             autoClose: 3500,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: false,
-    //             draggable: false,
-    //             theme: 'colored',
-    //             progress: undefined,
-    //         });
-    //         navigate('/login');
-    //     }
-    // }, [token]);
+    useEffect(() => {
+        if (token === '') {
+            toast.error('Você precisa estar logado', {
+                position: 'top-right',
+                autoClose: 3500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: 'colored',
+                progress: undefined,
+            });
+            navigate('/login');
+        }
+    }, [token]);
 
     async function fetchCategoria() {
         try {

@@ -80,7 +80,18 @@ function ListaProdutos() {
         </Box>
       </Grid> */}
 
-    <ListaCategoria />
+      <ListaCategoria />
+
+      <Grid item xs={12} justifyContent="center" className='fundo'style={{ backgroundColor: theme.palette.background.paper }}>
+
+      <Box className='boxProdCateg' display="flex" justifyContent="center" alignContent="center">
+      <Link to="/buscaprodutopornome">
+        <Button variant="contained" color="primary" startIcon={<SearchIcon />} style={{ height: '3.5rem', marginLeft: '0.5rem', backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText}}  >
+          Pesquisar produto por nome
+        </Button>
+      </Link>
+      </Box>
+      </Grid>
 
       <Grid item xs={12} justifyContent="center" className='fundo' style={{ backgroundColor: theme.palette.background.paper }}>
         <Box display="flex" flexWrap="wrap" justifyContent="center" className='boxProduto'>
