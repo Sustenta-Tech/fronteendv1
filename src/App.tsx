@@ -24,6 +24,7 @@ import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCa
 import Carrinho from './paginas/carrinho/Carrinho';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BuscaProdutoPorNome from './components/produtos/buscaprodutopornome/BuscaProdutoPorNome';
 
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
             <Route path="/formularioCategoria" element={<CadastroCategoria />} />
             <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+            <Route path="/buscaprodutopornome" element={<BuscaProdutoPorNome/>} />
             
           </Routes>
           <Footer />
