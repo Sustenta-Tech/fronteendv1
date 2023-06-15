@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Button, Card, CardActions, CardContent, Grid, Typography } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { buscaId } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -13,6 +13,9 @@ import './ProdutosCategoria.css'
 
 
 function ProdutosCategoria() {
+    
+    const theme = useTheme();
+
     const [categoria, setCategoria] = useState<Categoria | null>(null);
     let navigate = useNavigate();
 
@@ -62,9 +65,9 @@ function ProdutosCategoria() {
 
     return (
         <>
-            <Grid item xs={12} justifyContent="center" className='fundo' id="gridProdCat">
+            <Grid item xs={12} justifyContent="center" className='fundo' id="gridProdCat" style={{ backgroundColor: theme.palette.background.paper }}>
 
-                <Box justifyContent="center" textAlign="center" >
+                <Box justifyContent="center" textAlign="center" style={{ color: theme.palette.secondary.contrastText }} >
                     <Typography variant="h5" component="h2">
                         Categoria: {categoria.tipo}
                     </Typography>
@@ -73,11 +76,10 @@ function ProdutosCategoria() {
                     </Typography>
                 </Box>
 
-                <Box display="flex" flexWrap="wrap" justifyContent="center" className='boxProduto'>
-                    {/* {categoria.produto.map((produto) => ( */}
+                <Box display="flex" flexWrap="wrap" justifyContent="center" className='boxProduto' >
                     {categoria.produto.length > 0 ? (
                         categoria.produto.map((produto) => (
-                            <Card key={categoria.id} variant="outlined" className="cardPostagem">
+                            <Card key={categoria.id} variant="outlined" className="cardPostagem" style={{ backgroundColor: theme.palette.background.default, color: theme.palette.secondary.contrastText }}>
                                 <CardContent>
 
                                     <Typography variant="h5" component="h2">
@@ -86,7 +88,7 @@ function ProdutosCategoria() {
                                     <Typography variant="h5" component="h2">
                                         {produto.nome}
                                     </Typography>
-                                    <Typography variant="body2" component="p">
+                                    <Typography variant="body2" component="h2">
                                         {produto.descricao}
                                     </Typography>
                                     <Typography variant="body2" component="p">
@@ -95,7 +97,7 @@ function ProdutosCategoria() {
                                     <Typography variant="body2" component="p">
                                         <b>Quantidade em estoque:</b> {produto.quantidade}
                                     </Typography>
-                                    <Typography variant="body2" component="p" color="textSecondary">
+                                    <Typography variant="body2" component="p">
                                         <b>Categoria:</b> {categoria.tipo}
                                     </Typography>
                                 </CardContent>
@@ -107,13 +109,14 @@ function ProdutosCategoria() {
                                                 <Button
                                                     variant="contained"
                                                     className="marginLeft"
-                                                    size="small"
-                                                    color="primary"
+                                                    size="small"           
                                                     onClick={() => adicionarAoCarrinho(produto)}
+                                                    style={{ backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText }}
+
                                                 >
                                                     Adicionar ao carrinho
                                                 </Button>
-                                                <Button variant="contained" size="small" color="secondary">
+                                                <Button variant="contained" size="small" style={{ backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }}>
                                                     <FavoriteIcon />
                                                 </Button>
                                             </Box>

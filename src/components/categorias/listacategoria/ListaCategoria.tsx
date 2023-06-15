@@ -62,11 +62,9 @@ function ListaCategoria() {
                 <Box key={categoria.id} m={2} className='boxProdCateg' display="flex" justifyContent="center" alignContent="center">
                     <Card variant="outlined" className='cardProdCateg' >
                         <Link to={`/produtosCategoria/${categoria.id}`} className="text-decorator-none">
-                            <CardContent>
-                                <Typography variant="h6" component="h2">
+                            <Button className='buttonCateg' style={{ backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText }}>
                                     {categoria.tipo}
-                                </Typography>
-                            </CardContent>
+                            </Button>
                         </Link>
                     </Card>
                 </Box>
