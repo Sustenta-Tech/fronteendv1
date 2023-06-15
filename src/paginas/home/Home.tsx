@@ -5,14 +5,19 @@ import './Home.css'
 import Carrossel from "../../components/carrossel/Carrossel";
 import CarrosselInfo from "../../components/carrosselInfo/CarrosselInfo";
 import ListaProdutos from "../../components/produtos/listaproduto/ListaProdutos";
+import ListaCategoria from "../../components/categorias/listacategoria/ListaCategoria";
 
 function Home() {
+    
     return (
         <>
             <Grid container >
                 <Grid item xs={12}>
                     <Carrossel />
+
+                    
                     <ListaProdutos />
+
                 </Grid>
             </Grid>
 

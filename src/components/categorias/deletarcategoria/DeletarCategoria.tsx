@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 // import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
@@ -12,6 +12,8 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import './DeletarCategoria.css'
 
 function DeletarCategoria() {
+
+    const theme =  useTheme();
 
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
@@ -59,7 +61,7 @@ function DeletarCategoria() {
                 'Authorization': token
             }
         });
-        toast.success('Produto deletada com sucesso', {
+        toast.success('Categoria deletada com sucesso!', {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,
@@ -90,15 +92,15 @@ function DeletarCategoria() {
                         </Box>
 
                     </CardContent>
-                    <CardActions className='cardDeletarCateg'>
+                    <CardActions className='cardDeletarCateg' >
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-                            <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                            <Box mx={2} >
+                                <Button onClick={sim} variant="contained" className="marginLeft" size='large' style={{ backgroundColor: '#dc3545'}}>
                                     Sim
                                 </Button>
                             </Box>
-                            <Box>
-                                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                            <Box >
+                                <Button onClick={nao} variant="contained" size='large' style={{  backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText  }} >
                                     Não
                                 </Button>
                             </Box>

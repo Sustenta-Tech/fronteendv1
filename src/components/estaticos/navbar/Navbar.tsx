@@ -1,15 +1,21 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core'
-import { Box } from '@mui/material'
+import { AppBar, Icon, List, ListItemIcon, ListItemText, Toolbar, Typography } from '@material-ui/core'
+import { Box, ListItemButton } from '@mui/material'
 import './Navbar.css'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useAppThemeContext } from '../../../themes/ThemeContext';
+import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness';
 
 
 function Navbar() {
+
+    // const theme = useTheme();
+    const { toggleTheme } = useAppThemeContext();
+
     return (
         <>
-            <AppBar position='static' className='navbar' >
+            <AppBar position='static' className='navbar'>
                 <Toolbar variant='dense' className='separar'>
 
                     <Box display="flex" justifyContent="start" className='boxNav' >
@@ -73,6 +79,11 @@ function Navbar() {
                                 <ShoppingCartIcon />
                             </Box>
                         </Link>
+
+                        <Box mx={1} className='cursor' onClick={toggleTheme} alignItems={'center'}>
+                                <SettingsBrightnessIcon />
+                        </Box>
+
                     </Box>
                 </Toolbar>
             </AppBar>

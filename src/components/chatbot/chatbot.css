@@ -1,0 +1,12 @@
+.chat {
+    padding: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+@media (max-width: 500px) { 
+    .chat {
+        padding: 0.5rem;
+    }
+    
+}

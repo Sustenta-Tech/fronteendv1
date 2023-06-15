@@ -21,37 +21,44 @@ import CadastroCategoria from './components/categorias/cadastrocategoria/Cadastr
 import DeletarProduto from './components/produtos/deletarproduto/DeletarProduto';
 import Admin from './paginas/admin/Admin';
 import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCategoria';
-import Carrinho from './paginas/carrinho/Carrinho';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AppThemeProvider } from './themes/ThemeContext'
+import BotaoChat from './components/estaticos/botaoChat/BotaoChat';
+import ProdutosCategoria from './components/categorias/produtoscategoria/ProdutosCategoria';
+import Carrinho from './components/carrinho/Carrinho';
+import { CarrinhoProvider } from './store/carrinhocontext/CarrinhoContext';
 import BuscaProdutoPorNome from './components/produtos/buscaprodutopornome/BuscaProdutoPorNome';
 
 
 function App() {
-  const THEME = createTheme({
-    palette: {
-      primary: {
-        light: '#052e21',
-        main: '#061b14',
-        dark: '#000000',
-        contrastText: '#fff',
-      },
-      secondary: {
-        light: '#b6f28d',
-        main: '#8cb570',
-        dark: '#89d953',
-        contrastText: '#061b14',
-      },
-    },
-  });
+  // const THEME = createTheme({
+  //   palette: {
+  //     primary: {
+  //       light: '#052e21',
+  //       main: '#061b14',
+  //       dark: '#000000',
+  //       contrastText: '#fff',
+  //     },
+  //     secondary: {
+  //       light: '#b6f28d',
+  //       main: '#8cb570',
+  //       dark: '#89d953',
+  //       contrastText: '#061b14',
+  //     },
+  //   },
+  // });
 
   return (
     <>
-      <MuiThemeProvider theme={THEME}>
+      {/* <MuiThemeProvider theme={THEME}> */}
+      <AppThemeProvider>
+
       <Provider store={store}>
         <ToastContainer />
         <BrowserRouter>
           <Navbar />
+          <CarrinhoProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
@@ -65,6 +72,7 @@ function App() {
             <Route path="/cadastro" element={<CadastroUsuario />} />
             <Route path="/carrinho" element={<Carrinho />} />
 
+            <Route path="/produtosCategoria/:id" element={<ProdutosCategoria/>} />
             <Route path="/formularioProduto" element={<CadastroProduto />} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
@@ -75,10 +83,14 @@ function App() {
             <Route path="/buscaprodutopornome" element={<BuscaProdutoPorNome/>} />
             
           </Routes>
+
+          </CarrinhoProvider>
           <Footer />
+          <BotaoChat/>
         </BrowserRouter>
         </Provider>
-      </MuiThemeProvider>
+      {/* </MuiThemeProvider> */}
+      </AppThemeProvider>
 
     </>
   )

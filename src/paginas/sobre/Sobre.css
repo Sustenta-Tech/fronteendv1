@@ -1,9 +1,9 @@
- .caixa {
-     /* background-color: white;  */
- }
+ /* .caixa {
+     color: white; 
+ } */
 
  .subtituloSobre {
-     color: #8cb570;
+     color: #fff;
  }
 
  .nomeDev {
@@ -16,6 +16,7 @@
      color: #fff;
      font-family: 'Open Sans', sans-serif !important;
      min-height: 300px;
+     padding-inline: 100px;
  }
 
  .cardtech {
@@ -25,9 +26,14 @@
      padding: 20px;
  }
 
+ .titulomissao{
+    color: #fff !important;
+ }
+
+
  .devscard {
      border-top: #8cb570 solid 2px;
-     padding-top: 10px;
+     /* padding-top: 10px; */
      color: #fff !important;
      /* min-height: 155px;  */
  }
@@ -37,8 +43,9 @@
  }
 
  .devscard2 {
-     color: black !important;
+     /* color: black !important; */
      font-family: 'Open Sans', sans-serif !important;
+     padding-inline: 100px;
  }
 
 
@@ -46,7 +53,7 @@
      color: black !important;
      font-family: 'Open Sans', sans-serif !important;
      min-height: 300px;
-     padding: 50px;
+     padding-inline: 100px;
  }
 
  .cardicons {
@@ -56,7 +63,20 @@
      padding: 5px;
  }
 
- .fotosDev {
-     max-height: 180px;
-     /* border: red 1px solid; */
- }
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    .devscard2 {
+        padding: 15px;
+    }
+
+    .cardmissao {
+        padding: 22px;
+        flex-direction:column-reverse;
+    }
+
+    .titulo {
+        padding: 15px;
+    }
+}

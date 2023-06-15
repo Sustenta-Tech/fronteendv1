@@ -3,12 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import User from '../../models/User';
 import { cadastroUsuario } from '../../services/Service';
 import { Grid, Typography, Button, TextField } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
 import { toast } from 'react-toastify';
 
 function CadastroUsuario() {
+
+    const theme =  useTheme();
 
     const navigate = useNavigate();
     const [confirmarSenha, setConfirmarSenha] = useState<string>("")
@@ -93,7 +95,8 @@ function CadastroUsuario() {
     }
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center' className='gridCadastroUser'>
-            <Grid item md={6} xs={12} className='imagem2' ></Grid>
+            <Grid item md={6} xs={12} className='imagem2'>
+            </Grid>
             <Grid item md={6} xs={12} alignItems='center'>
                 <Box paddingX={6}>
                     <form onSubmit={onSubmit} className='formCadastro'>
@@ -105,11 +108,11 @@ function CadastroUsuario() {
                         <TextField className='textField' value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='url foto' variant='outlined' name='foto' margin='dense' fullWidth />
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
-                                <Button variant='contained' color='secondary' className='btnCancelar'>
+                                <Button variant='contained' color='secondary' className='btnCancelar' style={{ backgroundColor: theme.palette.secondary.main, color: theme.palette.secondary.contrastText }} >
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button type='submit' variant='contained' color='primary'style={{ backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText }}>
                                 Cadastrar
                             </Button>
                         </Box>
